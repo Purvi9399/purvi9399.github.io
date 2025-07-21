@@ -1,103 +1,58 @@
-# The Site Configuration
-
 theme: jekyll-theme-chirpy
 
 lang: en
 timezone: Asia/Kolkata
 
-title: AI Ethics Explorer
-tagline: Exploring the ethics of AI, one mini-project at a time.
+title: "AI Ethics Explorer"
+tagline: "Exploring the ethics of AI, one mini-project at a time."
 description: >-
   A blog and portfolio by Purvi Jain — exploring the intersection of AI, ethics, and digital governance through writing, coding, and curiosity.
 
 url: "https://purvi9399.github.io"
 baseurl: ""
 
-# Personal info
 author:
   name: "Purvi Jain"
   bio: "Philosophy + Tech | AI Ethics Explorer | Building tools and preparing for a PhD"
   location: "India"
-  email: "ipurvijain@gmail.com"  # (update with your real one)
+  email: "your.email@example.com"
 
 github:
   username: purvi9399
 
 twitter:
-  username: yourhandle  # optional
+  username: yourhandle
 
 social:
-  name: Purvi Jain
-  email: ipurvijain@gmail.com
+  name: "Purvi Jain"
+  email: "your.email@example.com"
   links:
     - https://github.com/purvi9399
-    - https://linkedin.com/in/purvijain7  # update
-    - https://twitter.com/probablypurvi        # update or remove
+    - https://linkedin.com/in/your-profile
+    - https://twitter.com/yourhandle
 
 footer:
   since: 2025
   name: "Purvi Jain"
 
-theme_mode: light  # Options: light, dark, or leave empty for auto
-
-# Optional CDN
-cdn:
-
-# Sidebar avatar
-avatar:
-
-# Social preview image
-social_preview_image:
+theme_mode: light
 
 toc: true
 
-# Comments (optional)
-comments:
-  provider:
-
-# Web analytics (optional)
-analytics:
-  google:
-    id:
-  goatcounter:
-    id:
-  cloudflare:
-    id:
-
-# PWA options
 pwa:
   enabled: true
   cache:
     enabled: true
     deny_paths: []
 
-# Pagination
 paginate: 10
 
-# Local Sass and HTML compression
 sass:
   style: compressed
 
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  blanklines: false
-  ignore:
-    envs: [development]
-
-# Jekyll settings
-kramdown:
-  footnote_backlink: "&#8617;&#xfe0e;"
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: highlight
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
+assets:
+  self_host:
+    enabled: false
 
 collections:
   tabs:
@@ -123,23 +78,3 @@ defaults:
     values:
       layout: page
       permalink: /:title/
-
-exclude:
-  - "*.gem"
-  - "*.gemspec"
-  - docs
-  - tools
-  - README.md
-  - LICENSE
-  - purgecss.js
-  - "*.config.js"
-  - "package*.json"
-
-jekyll-archives:
-  enabled: [categories, tags]
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
