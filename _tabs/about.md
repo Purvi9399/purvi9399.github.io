@@ -1,8 +1,11 @@
 ---
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
+title: About
+icon: fas fa-user
+order: 1
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+Hi, I'm Purvi Jain — a researcher at the intersection of technology, ethics, and society.
+
+I created AI Ethics Explorer to document my learning, build mini-projects, and reflect on the ethical dimensions of AI. My academic journey blends a BTech in Computer Science with an MSc in Philosophy, and I’m working toward a PhD in AI ethics.
+
+This space is where I think aloud — through code, questions, and curiosity.
