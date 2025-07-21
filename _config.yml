@@ -6,53 +6,19 @@ timezone: Asia/Kolkata
 title: "AI Ethics Explorer"
 tagline: "Exploring the ethics of AI, one mini-project at a time."
 description: >-
-  A blog and portfolio by Purvi Jain — exploring the intersection of AI, ethics, and digital governance through writing, coding, and curiosity.
+  A blog and portfolio by Purvi Jain — exploring the intersection of AI, ethics, and digital governance.
 
 url: "https://purvi9399.github.io"
 baseurl: ""
 
 author:
   name: "Purvi Jain"
-  bio: "Philosophy + Tech | AI Ethics Explorer | Building tools and preparing for a PhD"
-  location: "India"
-  email: "your.email@example.com"
+  email: "your@email.com"
 
 github:
   username: purvi9399
 
-twitter:
-  username: yourhandle
-
-social:
-  name: "Purvi Jain"
-  email: "your.email@example.com"
-  links:
-    - https://github.com/purvi9399
-    - https://linkedin.com/in/your-profile
-    - https://twitter.com/yourhandle
-
-footer:
-  since: 2025
-  name: "Purvi Jain"
-
 theme_mode: light
-
-toc: true
-
-pwa:
-  enabled: true
-  cache:
-    enabled: true
-    deny_paths: []
-
-paginate: 10
-
-sass:
-  style: compressed
-
-assets:
-  self_host:
-    enabled: false
 
 collections:
   tabs:
@@ -67,14 +33,5 @@ defaults:
       layout: post
       comments: true
       toc: true
-      permalink: /posts/:title/
-  - scope:
-      path: _drafts
-    values:
-      comments: false
-  - scope:
-      path: ""
-      type: tabs
-    values:
-      layout: page
-      permalink: /:title/
+      permalink: /posts/:t
+
