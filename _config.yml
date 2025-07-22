@@ -3,7 +3,7 @@ theme: jekyll-theme-chirpy
 lang: en
 timezone: Asia/Kolkata
 
-title: "AI Ethics Explorer"
+title: "PURVI JAIN"
 tagline: "Exploring the ethics of AI, one mini-project at a time."
 description: >-
   A blog and portfolio by Purvi Jain — exploring the intersection of AI, ethics, and digital governance.
@@ -34,6 +34,6 @@ defaults:
       layout: post
       comments: true
       toc: true
-      permalink: /posts/:t
+      permalink: /posts/:title
 
 
