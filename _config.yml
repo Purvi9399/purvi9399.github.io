@@ -1,4 +1,10 @@
 theme: jekyll-theme-chirpy
+sass:
+  style: compressed
+
+# Add your custom CSS
+assets:
+  custom_css: /assets/css/custom.scss
 
 lang: en
 timezone: Asia/Kolkata
