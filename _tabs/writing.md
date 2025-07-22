@@ -1,0 +1,7 @@
+---
+title: About
+icon: fas fa-user
+order: 1
+---
+
+Hi, I'm Purvi Jain. Welcome to my site!
