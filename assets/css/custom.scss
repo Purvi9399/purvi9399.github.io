@@ -1,0 +1,33 @@
+// custom.scss
+
+// Background and text
+body {
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+  color: #212529;
+}
+
+// Main container
+main {
+  padding-top: 2rem;
+}
+
+// Fancy heading
+h1, h2, h3, h4 {
+  font-family: 'Fira Sans', sans-serif;
+  color: #3f3d56;
+}
+
+// Buttons
+.btn-custom {
+  background-color: #a259ff;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #7c36d6;
+}
