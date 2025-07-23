@@ -25,10 +25,16 @@ author:
 github:
   username: purvi9399
 
-social:
-  linkedin: https://www.linkedin.com/in/purvi-jain7
-  email: ipurvijjain@gmail.com
-  youtube: https://youtube.com/@unitedbyfascinationforlearning
+linkedin: 
+  username: purvi-jain7
+
+email: ipurvijjain@gmail.com
+
+youtube: 
+   username: @unitedbyfascinationforlearning
+
+medium: 
+ username: @passionatepurvi07
 
 theme_mode: dark
 
