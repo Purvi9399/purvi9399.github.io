@@ -1,33 +1,110 @@
-// custom.scss
+// custom.scss (enhanced with typing effect, parallax scroll and hover cards)
 
-// Background and text
+// Fonts and Background
 body {
-  background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
-  color: #212529;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(120deg, #f5f7fa, #e8f0fe);
+  color: #1a1a1a;
+  line-height: 1.6;
+  transition: background 0.5s ease;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-// Main container
-main {
-  padding-top: 2rem;
-}
-
-// Fancy heading
+// Headings
 h1, h2, h3, h4 {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #3f3d56;
+  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
-// Buttons
+h1:hover, h2:hover, h3:hover {
+  color: #6f42c1;
+}
+
+// Button Styling
 .btn-custom {
   background-color: #a259ff;
   color: white;
-  border-radius: 8px;
-  padding: 10px 20px;
-  text-decoration: none;
+  border-radius: 10px;
+  padding: 12px 24px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(162, 89, 255, 0.2);
 }
 
 .btn-custom:hover {
   background-color: #7c36d6;
+  transform: translateY(-2px);
+}
+
+// Section Fade-in
+section {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Typing effect for hero title
+.typing {
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  border-right: 3px solid #a259ff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #a259ff }
+}
+
+// Parallax section background
+.parallax {
+  background-image: url('/assets/img/parallax-bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 6rem 0;
+  color: white;
+  text-align: center;
+}
+
+// Hover Cards (Projects, About, etc)
+.card-hover {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-hover h3 {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0;
+  color: #3f3d56;
 }
