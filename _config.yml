@@ -12,7 +12,7 @@ timezone: Asia/Kolkata
 title: "PURVI JAIN"
 tagline: "Exploring the ethics of AI, one mini-project at a time."
 description: >-
-  A blog and portfolio by Purvi Jain — exploring the intersection of AI, ethics, and digital governance.
+  A blog and portfolio by Purvi Jain, exploring the intersection of AI, ethics, and digital governance.
 
 url: "https://purvi9399.github.io"
 baseurl: ""
@@ -24,6 +24,11 @@ author:
 
 github:
   username: purvi9399
+
+social:
+  linkedin: https://www.linkedin.com/in/purvi-jain7
+  email: ipurvijjain@gmail.com
+  youtube: https://youtube.com/@unitedbyfascinationforlearning
 
 theme_mode: dark
 
