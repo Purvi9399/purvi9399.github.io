@@ -3,7 +3,7 @@ title: Blogs
 icon: fas fa-pen-nib
 order: 3
 layout: null
-permalink: /tabs/blogs/
+permalink: /tabs/ethical/
 ---
 
 <!DOCTYPE html>
