@@ -2,7 +2,7 @@
 
 // Fonts and Background
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(120deg, #f5f7fa, #e8f0fe);
   color: #1a1a1a;
   line-height: 1.6;
@@ -10,6 +10,35 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+  color: #212529;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Space Grotesque', serif;
+  color: #3f3d56;
+  font-weight: 700;
+}
+
+// Navigation or tab-like links
+a.nav-link, .nav-tab {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #6b21a8;
+  text-decoration: none;
+}
+
+a.nav-link:hover, .nav-tab:hover {
+  color: #a855f7;
+  text-decoration: underline;
+}
+
 
 // Headings
 h1, h2, h3, h4 {
