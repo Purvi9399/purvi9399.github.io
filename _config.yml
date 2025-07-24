@@ -23,11 +23,15 @@ author:
   email: "ipurvijain@gmail.com"
 
 social:
-  github: purvi9399
-  linkedin: purvi-jain7
-  email: purvijjain@gmail.com
-  youtube: unitedbyfascinationforlearning
-  medium: passionatepurvi07
+  name: Purvi Jain
+  email: ipurvijain@gmail.com
+  links:
+    - https://github.com/purvi9399
+    - https://medium.com/@unitedbyfascinationforlearning
+    - https://www.linkedin.com/in/purvi-jain
+    - mailto:ipurvijain@gmail.com
+    - https://www.youtube.com/watch?v=O9JnMjOlDcw
+
 
 
 theme_mode: dark
