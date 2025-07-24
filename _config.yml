@@ -6,6 +6,9 @@ sass:
 assets:
   custom_css: /assets/css/custom.scss
 
+footer:
+  custom: footer/custom
+
 lang: en
 timezone: Asia/Kolkata
 
