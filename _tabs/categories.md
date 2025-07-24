@@ -1,5 +1,5 @@
 ---
-layout: categories
+layout: page
 icon: fas fa-user
 title: "About Me"
 order: 1
