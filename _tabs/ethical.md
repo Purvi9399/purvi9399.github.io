@@ -1,9 +1,6 @@
 ---
-  title: Ethical Writing
-  url: https://medium.com/@passionatepurvi07
-  icon: pen
-  external: true
+title: Ethical Writing
+icon: fas fa-pen-nib
+order: 3
+redirect_to: https://medium.com/@passionatepurvi07
 ---
-
-
-
