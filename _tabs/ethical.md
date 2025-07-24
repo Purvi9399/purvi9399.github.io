@@ -1,7 +1,9 @@
 ---
-title: Ethical writing
-icon: fas fa-user
-order: 1
+  title: Ethical Writing
+  url: https://medium.com/@passionatepurvi07
+  icon: pen
+  external: true
 ---
 
-Hi, I'm Purvi Jain. Welcome to my site!
+
+
