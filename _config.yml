@@ -8,6 +8,8 @@ assets:
 
 footer:
   custom: footer/custom
+  license: false
+  links: false
 
 lang: en
 timezone: Asia/Kolkata
