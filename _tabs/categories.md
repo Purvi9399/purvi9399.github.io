@@ -40,7 +40,7 @@ Investigated transparency, epistemic authority, and LLMs...
 **Workshop on LLMs & Philosophy (Berlin, May 2025)**  
 Explored semantic, cognitive, and moral implications...
 
-## 🌱 GreenBeans Society: E-Waste Activism
+## GreenBeans Society: E-Waste Activism
 
 Co-founder & President of **GreenBeans Society**, a student-led initiative in Chhattisgarh:
 - Reached 100+ colleges via workshops
@@ -49,7 +49,7 @@ Co-founder & President of **GreenBeans Society**, a student-led initiative in Ch
 
 [Watch our GreenBeans intro video](https://your-link-here)
 
-## 🧠 Bridging Worlds: Philosophy & Tech
+## Bridging Worlds: Philosophy & Tech
 
 - Founded a reading group on **LLMs & Philosophy**
 - Host of [**UFL Podcast**](https://www.youtube.com/@unitedbyfascinationforlearning)
