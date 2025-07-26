@@ -5,16 +5,44 @@ order: 1
 layout: default
 ---
 
+<!-- Custom Styling for About Me Page -->
 <style>
   .about-me-container {
     max-width: 850px;
     margin: 0 auto;
-    line-height: 1.7;
-    font-size: 1rem;
-    color: #222;
+    padding: 3rem 2rem;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.85;
+    font-size: 1.1rem;
+    color: #1c1c1c;
+    background-color: #f3e6ed; /* softer shade than previous */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  .about-me-container h1,
+  .about-me-container h2,
+  .about-me-container h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin-top: 2rem;
+    color: #111;
+  }
+  .about-me-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
   }
   .about-me-container h2 {
-    margin-top: 2rem;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+  }
+  .about-me-container h3 {
+    font-size: 1.3rem;
+  }
+  .about-me-container a {
+    color: #8a2be2;
+    text-decoration: underline;
+  }
+  .about-me-container a:hover {
+    text-decoration: none;
   }
 </style>
 
@@ -29,48 +57,50 @@ As someone trained in both computer science and philosophy, I find my voice in a
 ## Academic Journey
 
 **Bachelor’s in Information Technology / Computer Science**  
-My formal education began in coding and software development...
+My formal education began in coding and software development. From my early teens, I was fascinated by how digital systems can solve problems—and also how they might create new ethical dilemmas.
 
 **Master’s in Philosophy (University of Glasgow)**  
-A pivotal shift: during the lockdown, I realized...
+A pivotal shift: during the lockdown, I realized that questions about bias, fairness, and digital power transcend code. My dissertation, “Towards an Unbiased AI: Integrating John Rawls’ Theory of Justice into Ethical AI Frameworks,” explored how normative theories can make machine learning fairer and more accountable.
 
-**Summer School in Ethics of AI (LSE)**  
-Investigated transparency, epistemic authority, and LLMs...
+**Summer School in Ethics of AI (London School of Economics)**  
+I investigated transparency, epistemic authority, and large language models from an ethical and political perspective.
 
 **Workshop on LLMs & Philosophy (Berlin, May 2025)**  
-Explored semantic, cognitive, and moral implications...
+Explored the semantic, cognitive, and moral implications of foundational models, including how prompting reshapes decision-making in technical systems.
 
-## GreenBeans Society: E-Waste Activism
+## GreenBeans Society: E‑Waste Activism
 
-Co-founder & President of **GreenBeans Society**, a student-led initiative in Chhattisgarh:
-- Reached 100+ colleges via workshops
-- Persuaded universities to recycle old IT equipment
-- Made e-waste a shared responsibility
+I co-founded and currently serve as the President of **GreenBeans Society** — the first student‑led initiative in Chhattisgarh focused on e‑waste awareness. We:
+- Reached over 100 colleges in three months through campaigns, student-led workshops, and presentations.
+- Persuaded local universities to recycle old IT equipment rather than discard them.
+- Helped redefine community understanding: e‑waste became a shared responsibility, not mere “junk.”
 
-[Watch our GreenBeans intro video](https://your-link-here)
+📺 [Watch our GreenBeans introduction video](https://your-youtube-link-here)
 
 ## Bridging Worlds: Philosophy & Tech
 
-- Founded a reading group on **LLMs & Philosophy**
-- Host of [**UFL Podcast**](https://www.youtube.com/@unitedbyfascinationforlearning)
-- Write essays on [**Medium**](https://medium.com/@passionatepurvi07)
+- Founded a reading group at University of Glasgow exploring LLMs and philosophy with faculty and students.
+- Launched [**United by Fascination for Learning (UFL)**](https://www.youtube.com/@unitedbyfascinationforlearning) — a YouTube podcast‐style series that interprets philosophical debates.
+- Maintain a public [**Medium blog**](https://medium.com/@passionatepurvi07) on AI ethics, environmental impacts of computing, and techno-social justice.
 
 ## Professional Affiliation & Mentoring
 
-- Mentor with **IntoUniversity**
-- Member of **SWIP**, **MAP**, and **The Aristotelian Society**
-- Contributor to *Noctua*, published _Technological Change..._
+- Volunteer mentor with **IntoUniversity**, nurturing academic confidence in younger students.
+- Member of **SWIP UK**, **MAP**, and **The Aristotelian Society**.
+- Contributor to *Noctua*, published the article _"Technological Change and the Evolution of Perspectives on Artificial Consciousness"._
 
 ## Why I Do What I Do
 
-I’m drawn to questions at the intersection of tech, ethics, and power. How do we build systems that enhance agency? What are our obligations as designers and thinkers?
+I’m drawn to questions at the intersection of technology, ethics, and power. How do we build systems that enhance human agency? What responsibilities do designers, institutions, and policy-makers have in shaping digital infrastructures?
 
-My background allows me to translate code into ethical insight—and vice versa.
+My background gives me fluency in both technical and normative languages — allowing me to translate code into ethical insight and vice versa. My activism has taught me how to move ideas into institutions; my scholarship, how to move institutions into ethical frameworks.
 
 ## 💬 Collaboration & Contact
 
-Let’s connect for research, writing, or ethical tech projects.
+I am always interested in research collaborations, guest lectures, writing partnerships, or any initiative where technology meets social values.
 
 📧 [ipurvijain@gmail.com](mailto:ipurvijain@gmail.com)
+
+Looking forward to connecting, questioning, and building together.
 
 </div>
