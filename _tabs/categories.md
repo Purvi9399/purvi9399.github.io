@@ -56,7 +56,7 @@ layout: default
 
 <li>As someone trained in both computer science and philosophy, I find my voice in asking not only “What does this system do?” but also “What does this system mean, and what values does it enact?” During undergraduate years, I built tools and solved technical problems. But when I stepped back to ask, “For whom? At what cost?” I realized that meaning matters no less than functionality. This dual fluency: technical and normative, remains central to my work. It’s why I moved to pursue a Master’s in philosophy after my IT degree, and it’s what drives my passion for projects like Self‑Sovereign Identity, algorithmic ethics, and the politics of digital infrastructure.</li>
 
-<h2>🎓Academic Journey:</h2>
+<h2>🎓 Academic Journey:</h2>
 
 <h3>Bachelor’s in Information Technology / Computer Science </h3> 
 <p>My formal education began in coding and software development. From my early teens, I was fascinated by how digital systems can solve problems—and also how they might create new ethical dilemmas.</p>
@@ -70,7 +70,7 @@ layout: default
 <h3>Workshop on LLMs & Philosophy (Berlin, May 2025)</h3>
 <p>Explored the semantic, cognitive, and moral implications of foundational models, including how prompting reshapes decision-making in technical systems.</p>
 
-<h2>🌱GreenBeans Society: E‑Waste Activism </h2>
+<h2>🌱 GreenBeans Society: E‑Waste Activism </h2>
 
 <p>I co-founded and currently serve as the President of **GreenBeans Society** — the first student‑led initiative in Chhattisgarh focused on e‑waste awareness. We:
 - Reached over 100 colleges in three months through campaigns, student-led workshops, and presentations.
@@ -79,7 +79,7 @@ layout: default
 
 <p>📺 <a href="https://youtu.be/OgPp5OKAzEU?si=bzyVCWWPf4AAALrF">Watch our GreenBeans introduction video</a></p>
 
- <h2>🖇Bridging Worlds: Philosophy & Tech</h2>
+ <h2>🖇 Bridging Worlds: Philosophy & Tech</h2>
   <ul>
     <li>- Founded a reading group at University of Glasgow exploring LLMs and philosophy with faculty and students.</li>
     <li>- Launched <a href="https://www.youtube.com/@unitedbyfascinationforlearning">🎙️UFL</a> a YouTube podcast‐style series that interprets philosophical debates.</li>
@@ -92,7 +92,7 @@ layout: default
 <li>Member of <a href="https://www.swipuk.org/">SWIP</a> UK,Minorities in Philosophy, and <a href="https://www.aristoteliansociety.org.uk/">The Aristotelian Society</a></li>
 <li>Contributor to Noctua, annual philosphy magazine in University of Glasgow , published the article "Technological Change and the Evolution of Perspectives on Artificial Consciousness".</li>
 
-<h2>🎯Why I Do What I Do </h2>
+<h2>🎯 Why I Do What I Do </h2>
 
 <li>I’m drawn to questions at the intersection of technology, ethics, and power. How do we build systems that enhance human agency? What responsibilities do designers, institutions, and policy-makers have in shaping digital infrastructures?</li>
 
