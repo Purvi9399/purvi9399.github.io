@@ -48,59 +48,68 @@ layout: default
 
 <div class="about-me-container">
 
-# Hello! I’m Purvi Jain 
+<h1>Hello! I’m Purvi Jain </h1>
 
-I’m a technologist by training, a philosopher by calling, and an environmental activist at heart. My work centers around the intersection of digital systems, ethics, and social change. Raised in India, I've traversed an unusual path: from programming in computer science to probing philosophical dilemmas. My story begins with lines of code-lessons in logic, structure, problem-solving—and ends (so far) in classrooms and public spaces, asking much bigger questions: What kind of society should digital systems build? Who benefits when identity is tracked or anonymized? And how can technology be shaped responsibly, for all?
+<p>I’m a technologist by training, a philosopher by calling, and an environmental activist at heart. My work centers around the intersection of digital systems, ethics, and social change. Raised in India, I've traversed an unusual path: from programming in computer science to probing philosophical dilemmas. My story begins with lines of code-lessons in logic, structure, problem-solving—and ends (so far) in classrooms and public spaces, asking much bigger questions: What kind of society should digital systems build? Who benefits when identity is tracked or anonymized? And how can technology be shaped responsibly, for all?
 
-As someone trained in both computer science and philosophy, I find my voice in asking not only “What does this system do?” but also “What does this system mean, and what values does it enact?” During undergraduate years, I built tools and solved technical problems. But when I stepped back to ask, “For whom? At what cost?” I realized that meaning matters no less than functionality. This dual fluency: technical and normative, remains central to my work. It’s why I moved to pursue a Master’s in philosophy after my IT degree, and it’s what drives my passion for projects like Self‑Sovereign Identity, algorithmic ethics, and the politics of digital infrastructure.
+As someone trained in both computer science and philosophy, I find my voice in asking not only “What does this system do?” but also “What does this system mean, and what values does it enact?” During undergraduate years, I built tools and solved technical problems. But when I stepped back to ask, “For whom? At what cost?” I realized that meaning matters no less than functionality. This dual fluency: technical and normative, remains central to my work. It’s why I moved to pursue a Master’s in philosophy after my IT degree, and it’s what drives my passion for projects like Self‑Sovereign Identity, algorithmic ethics, and the politics of digital infrastructure.</p>
 
-## Academic Journey
+<h2>Academic Journey</h2>
 
-**Bachelor’s in Information Technology / Computer Science**  
-My formal education began in coding and software development. From my early teens, I was fascinated by how digital systems can solve problems—and also how they might create new ethical dilemmas.
+<h3>Bachelor’s in Information Technology / Computer Science </h3> 
+<p>My formal education began in coding and software development. From my early teens, I was fascinated by how digital systems can solve problems—and also how they might create new ethical dilemmas.</p>
 
-**Master’s in Philosophy (University of Glasgow)**  
-A pivotal shift: during the lockdown, I realized that questions about bias, fairness, and digital power transcend code. My dissertation, “Towards an Unbiased AI: Integrating John Rawls’ Theory of Justice into Ethical AI Frameworks,” explored how normative theories can make machine learning fairer and more accountable.
+<h3>Master’s in Philosophy (University of Glasgow)</h3> 
+<p>A pivotal shift: during the lockdown, I realized that questions about bias, fairness, and digital power transcend code. My dissertation, “Towards an Unbiased AI: Integrating John Rawls’ Theory of Justice into Ethical AI Frameworks,” explored how normative theories can make machine learning fairer and more accountable. <p>
 
-**Summer School in Ethics of AI (London School of Economics)**  
-I investigated transparency, epistemic authority, and large language models from an ethical and political perspective.
+<h3>Summer School in Ethics of AI (London School of Economics)</h3>  
+<p>I investigated transparency, epistemic authority, and large language models from an ethical and political perspective.</p>
 
-**Workshop on LLMs & Philosophy (Berlin, May 2025)**  
-Explored the semantic, cognitive, and moral implications of foundational models, including how prompting reshapes decision-making in technical systems.
+<h3>Workshop on LLMs & Philosophy (Berlin, May 2025)</h3>
+<p>Explored the semantic, cognitive, and moral implications of foundational models, including how prompting reshapes decision-making in technical systems.</p>
 
-## GreenBeans Society: E‑Waste Activism
+<h2>GreenBeans Society: E‑Waste Activism </h2>
 
-I co-founded and currently serve as the President of **GreenBeans Society** — the first student‑led initiative in Chhattisgarh focused on e‑waste awareness. We:
+<p>I co-founded and currently serve as the President of **GreenBeans Society** — the first student‑led initiative in Chhattisgarh focused on e‑waste awareness. We:
 - Reached over 100 colleges in three months through campaigns, student-led workshops, and presentations.
 - Persuaded local universities to recycle old IT equipment rather than discard them.
-- Helped redefine community understanding: e‑waste became a shared responsibility, not mere “junk.”
+- Helped redefine community understanding: e‑waste became a shared responsibility, not mere “junk.”</p>
 
-📺 [Watch our GreenBeans introduction video](https://your-youtube-link-here)
+<p>📺 <a href="https://youtu.be/OgPp5OKAzEU?si=bzyVCWWPf4AAALrF">Watch our GreenBeans introduction video</a></p>
 
-## Bridging Worlds: Philosophy & Tech
+ <h2>Bridging Worlds: Philosophy & Tech</h2>
+  <ul>
+    <li>- Founded a reading group at University of Glasgow exploring LLMs and philosophy with faculty and students.</li>
+    <li>- Launched <a href="https://www.youtube.com/@unitedbyfascinationforlearning">UFL -  a YouTube podcast‐style series that interprets philosophical debates. </a></li>
+    <li>- Maintain a public<a href="https://medium.com/@passionatepurvi07">Medium blog</a> on AI ethics, environmental impacts of computing, and techno-social justice.</li>
+  </ul>
 
-- Founded a reading group at University of Glasgow exploring LLMs and philosophy with faculty and students.
-- Launched [**United by Fascination for Learning (UFL)**](https://www.youtube.com/@unitedbyfascinationforlearning) — a YouTube podcast‐style series that interprets philosophical debates.
-- Maintain a public [**Medium blog**](https://medium.com/@passionatepurvi07) on AI ethics, environmental impacts of computing, and techno-social justice.
+<h3>Professional Affiliation & Mentoring</h3>
 
-## Professional Affiliation & Mentoring
-
-- Volunteer mentor with **IntoUniversity**, nurturing academic confidence in younger students.
+<p>- Volunteer mentor with **IntoUniversity**, nurturing academic confidence in younger students.
 - Member of **SWIP UK**, **MAP**, and **The Aristotelian Society**.
-- Contributor to *Noctua*, published the article _"Technological Change and the Evolution of Perspectives on Artificial Consciousness"._
+- Contributor to *Noctua*, published the article _"Technological Change and the Evolution of Perspectives on Artificial Consciousness".</p>
 
-## Why I Do What I Do
+<h2>Why I Do What I Do </h2>
 
-I’m drawn to questions at the intersection of technology, ethics, and power. How do we build systems that enhance human agency? What responsibilities do designers, institutions, and policy-makers have in shaping digital infrastructures?
+<p>I’m drawn to questions at the intersection of technology, ethics, and power. How do we build systems that enhance human agency? What responsibilities do designers, institutions, and policy-makers have in shaping digital infrastructures?
 
-My background gives me fluency in both technical and normative languages — allowing me to translate code into ethical insight and vice versa. My activism has taught me how to move ideas into institutions; my scholarship, how to move institutions into ethical frameworks.
+My background gives me fluency in both technical and normative languages, allowing me to translate code into ethical insight and vice versa. My activism has taught me how to move ideas into institutions; my scholarship, how to move institutions into ethical frameworks.</p>
 
-## 💬 Collaboration & Contact
+<h2>💬 Collaboration & Contact</h2>
 
-I am always interested in research collaborations, guest lectures, writing partnerships, or any initiative where technology meets social values.
+<p>I am always interested in research collaborations, guest lectures, writing partnerships, or any initiative where technology meets social values.</p>
 
-📧 [ipurvijain@gmail.com](mailto:ipurvijain@gmail.com)
+<p>Email me at <a href="mailto:ipurvijain@gmail.com">ipurvijain@gmail.com</a></p>)
 
-Looking forward to connecting, questioning, and building together.
+<p>Looking forward to connecting, questioning, and building together.</p>
 
 </div>
+
+
+
+ 
+
+
+  
+
