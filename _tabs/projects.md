@@ -80,15 +80,18 @@ layout: default
   }
 
   .modal-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 2rem;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 800px;
-    position: relative;
-    font-family: 'Space Grotesk', sans-serif;
-  }
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;         /* NEW: restrict max height */
+  overflow-y: auto;         /* NEW: enable scrolling */
+  position: relative;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+
 
   .close {
     color: #aaa;
@@ -113,8 +116,11 @@ layout: default
   <div class="projects-grid">
     <!-- Project 1 -->
     <div class="project-card" onclick="openModal('biasModal')">
-      <img src="/assets/img/projects/bias-checker.png" alt="Bias Checker Project Screenshot" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
-      <h3>Bias Checker: Explainable AI</h3>
+      <img src="/assets/img/bias_checker.png" alt="Bias Checker Project Screenshot" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
+ <h3>Bias Checker: Explainable AI</h3>
+    <p>A mini-project using LIME to audit bias in toxic language models with identity-swapped templates.</p>
+    <a href="https://github.com/purvi9399/bias-audit-toxic-language" target="_blank" class="view-code">View Code →</a>
+  </div>
     </div>
 
     <!-- Project 2 Placeholder -->
