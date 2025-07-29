@@ -19,22 +19,22 @@
     <p style="font-size: 0.85rem; color: #aaa;">{{ site.tagline }}</p>
   </div>
 
-  <!-- Nav Links -->
-  <nav class="sidebar-nav" style="margin-top: 30px;">
-    <ul style="list-style: none; padding: 0;">
-      {% assign tabs = site.tabs | sort: 'order' %}
-      {% for tab in tabs %}
-      <li style="margin-bottom: 12px;">
-        <a href="{{ tab.url | relative_url }}" class="sidebar-link" style="color: #ddd; font-size: 1rem; text-decoration: none; padding: 6px 10px; display: block; border-radius: 6px; transition: all 0.2s ease;">
-          <i class="fas fa-{{ tab.icon }}" style="margin-right: 8px;"></i> {{ tab.title }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
+<!-- Nav Links -->
+<nav class="sidebar-nav" style="margin-top: 30px;">
+  <ul style="list-style: none; padding: 0;">
+    {% assign tabs = site.tabs | sort: 'order' %}
+    {% for tab in tabs %}
+    <li style="margin-bottom: 12px;">
+      <a href="{{ tab.url | relative_url }}" class="sidebar-link" style="color: #ddd; font-size: 1rem; text-decoration: none; padding: 6px 10px; display: block; border-radius: 6px; transition: all 0.2s ease;">
+        <i class="fas fa-{{ tab.icon }}" style="margin-right: 8px;"></i> {{ tab.title }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
 
   <!-- Social Icons -->
-  <div class="sidebar-social" style="text-align: center; margin-top: 40px;">
+  <div class="sidebar-social" style="text-align: center; margin-top: 80px;">
     <a href="https://github.com/purvi9399" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fab fa-github fa-lg"></i></a>
     <a href="mailto:ipurvijain@gmail.com" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fas fa-envelope fa-lg"></i></a>
     <a href="https://www.linkedin.com/in/purvi-jain7" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fab fa-linkedin fa-lg"></i></a>
