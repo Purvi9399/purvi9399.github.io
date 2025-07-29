@@ -3,6 +3,8 @@
 title: Projects
 icon: fas fa-code
 order: 2
+layout: default
+permalink: /projects/
 ---
 
 <!-- Project Page Custom Styles & Animations -->
