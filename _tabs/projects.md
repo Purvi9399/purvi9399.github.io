@@ -2,7 +2,6 @@
 title: Projects
 icon: fas fa-code
 order: 2
-permalink: /projects/
 layout: default
 ---
 
