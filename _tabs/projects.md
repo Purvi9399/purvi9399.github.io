@@ -1,5 +1,5 @@
 ---
-title: Projects
+title:Projects
 icon: fas fa-code
 order: 2
 layout: default
@@ -121,19 +121,18 @@ layout: default
     <p>A mini-project using LIME to audit bias in toxic language models with identity-swapped templates.</p>
     <a href="https://github.com/purvi9399/bias-audit-toxic-language" target="_blank" class="view-code">View Code →</a>
   </div>
-    </div>
-
-    <!-- Project 2 Placeholder -->
+  <!-- Project 2 Placeholder -->
     <div class="project-card">
       <h3>Coming Soon</h3>
     </div>
-
-    <!-- Project 3 Placeholder -->
+ <!-- Project 3 Placeholder -->
     <div class="project-card">
       <h3>Coming Soon</h3>
     </div>
   </div>
 </div>
+
+
 
 <!-- Modal Content -->
 <div id="biasModal" class="modal">
@@ -141,17 +140,19 @@ layout: default
     <span class="close" onclick="closeModal('biasModal')">&times;</span>
     <h2 style="color:#6f1cb1; font-family:'Space Grotesk',sans-serif;">Bias Checker: Explainable AI</h2>
     <p><strong>What’s this project about?</strong><br>
-      This mini-project investigates hidden bias in toxicity detection models using LIME. We used neutral sentence templates and identity-swapped names to audit a classifier’s behaviour.</p>
+This mini-project investigates hidden bias in toxicity detection models using LIME. We used neutral sentence templates with different names to see if the model gave higher toxicity scores to some people than others, revealing any kind of racial or sexual biases in the model. </p>
     <p><strong>Why does it matter?</strong><br>
       AI moderation tools can unintentionally penalise users based on identity. We used explainability to uncover and visualise this problem.</p>
-    <p><strong>🛠️ Tools & Methods:</strong><br>
+    <p><strong>Tools & Methods:</strong><br>
       - Logistic Regression on Kaggle Toxic Comments<br>
       - LIME explanations<br>
       - 200+ sentence templates<br>
       - ANOVA & group comparison<br>
       - Perspective API benchmark</p>
     <p><strong>Key Insight:</strong><br>
-      Identity words like "Ahmed" often contributed more to a toxicity score than the actual sentiment word. Bias is real—and explainable AI helps reveal it.</p>
+     Using a custom-trained classifier and sentence templates with swapped names, we found that even when sentence structure remained neutral, certain names (like “Ahmed” or “Jamal”) consistently received higher toxicity scores than others (like “David” or “Emily”)—especially when paired with negative adjectives. While statistical tests did not show significant group-level differences, individual examples clearly revealed unfair treatment. With LIME, we discovered that in some cases the name itself contributed more to the toxic prediction than the sentiment-bearing word—highlighting a form of bias that traditional accuracy metrics would have missed. 
+
+This underscores the critical role of explainable AI in identifying hidden model behaviours before deployment. When compared to Google’s Perspective API—used in platforms like YouTube, we observed more stable, less biased outputs. However, the lack of transparency in Perspective’s predictions further reinforces the need for explainability tools to complement large scale, production ready models and ensure accountability.</p>
     <img src="/assets/img/Bias_Results.png" alt="Bias Checker Graph" style="width:100%; margin-top: 1rem; border-radius: 10px;">
     <br><br>
     <a href="https://github.com/purvi9399/bias-audit-toxic-language" target="_blank">🔗 View Code on GitHub</a>
