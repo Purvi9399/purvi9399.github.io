@@ -72,11 +72,17 @@ layout: default
 
   .modal {
     display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* this centers the box */
+  z-index: 1000;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
   }
 
   .modal-content {
@@ -150,9 +156,11 @@ This mini-project investigates hidden bias in toxicity detection models using LI
       - ANOVA & group comparison<br>
       - Perspective API benchmark</p>
     <p><strong>Key Insight:</strong><br>
-     Using a custom-trained classifier and sentence templates with swapped names, we found that even when sentence structure remained neutral, certain names (like “Ahmed” or “Jamal”) consistently received higher toxicity scores than others (like “David” or “Emily”)—especially when paired with negative adjectives. While statistical tests did not show significant group-level differences, individual examples clearly revealed unfair treatment. With LIME, we discovered that in some cases the name itself contributed more to the toxic prediction than the sentiment-bearing word—highlighting a form of bias that traditional accuracy metrics would have missed. 
+     Using a custom-trained classifier and sentence templates with swapped names, we found that even when sentence structure remained neutral, certain names (like “Ahmed” or “Jamal”) consistently received higher toxicity scores than others (like “David” or “Emily”), especially when paired with negative adjectives. 
 
-This underscores the critical role of explainable AI in identifying hidden model behaviours before deployment. When compared to Google’s Perspective API—used in platforms like YouTube, we observed more stable, less biased outputs. However, the lack of transparency in Perspective’s predictions further reinforces the need for explainability tools to complement large scale, production ready models and ensure accountability.</p>
+While statistical tests did not show significant group level differences, individual examples clearly revealed unfair treatment. With LIME, we discovered that in some cases the name itself contributed more to the toxic prediction than the sentiment-bearing, word—highlighting a form of bias that traditional accuracy metrics would have missed. 
+
+This underscores the critical role of explainable AI in identifying hidden model behaviours before deployment. When compared to Google’s Perspective API, used in platforms like YouTube comments, we observed more stable, less biased outputs. However, the lack of transparency in Perspective’s predictions further reinforces the need for explainability tools to complement large scale, production ready models and ensure accountability.</p>
     <img src="/assets/img/Bias_Results.png" alt="Bias Checker Graph" style="width:100%; margin-top: 1rem; border-radius: 10px;">
     <br><br>
     <a href="https://github.com/purvi9399/bias-audit-toxic-language" target="_blank">🔗 View Code on GitHub</a>
