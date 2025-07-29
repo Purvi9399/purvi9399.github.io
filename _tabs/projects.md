@@ -1,10 +1,9 @@
-
 ---
 title: Projects
 icon: fas fa-code
 order: 2
-layout: default
 permalink: /projects/
+layout: default
 ---
 
 <!-- Project Page Custom Styles & Animations -->
