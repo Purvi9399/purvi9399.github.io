@@ -133,6 +133,8 @@ layout: default
   .acc-panel p { margin: .45rem 0 .4rem; color: var(--ink); }
   .acc-panel a { color: var(--accent); text-decoration: underline; }
 
+
+
   /* MEDIA STRIP */
   .media-row {
     display: grid; gap: .75rem;
@@ -217,30 +219,73 @@ layout: default
 
   </div>
 
-  <!-- HIGHLIGHTS -->
-  <h2 class="section-title"><span class="dot"></span> Highlights</h2>
-  <div class="chips">
-    <div class="chip">
-      <b>GreenBeans Society · President</b>
-      <small>E-waste activism. 100+ colleges reached; helped universities shift to responsible recycling.</small>
-    </div>
-    <div class="chip">
-      <b>Reading Group · LLMs &amp; Philosophy</b>
-      <small>Founded an interdisciplinary forum at Glasgow to bridge systems and semantics.</small>
-    </div>
-    <div class="chip">
-      <b>United by Fascination for Learning (UFL)</b>
-      <small>Podcast-style YouTube series translating philosophy for broader audiences.</small>
-    </div>
-    <div class="chip">
-      <b>Mentor · IntoUniversity</b>
-      <small>Supporting curiosity and academic confidence for younger students.</small>
-    </div>
-    <div class="chip">
-      <b>Communities</b>
-      <small>SWIP UK · MAP · The Aristotelian Society.</small>
-    </div>
+.chip details { margin-top:.35rem; }
+.chip summary { cursor:pointer; font-weight:600; color: var(--ink); }
+.chip details[open] summary { color: var(--accent); }
+<!-- Highlights (expanded) -->
+<div class="chips">
+  <div class="chip">
+    <b>Reading Group · LLMs & Philosophy</b>
+    <details>
+      <summary>Interdisciplinary forum at Glasgow</summary>
+      <small>Ongoing series bridging systems, semantics, and ethics with faculty & students.</small>
+    </details>
   </div>
+
+  <div class="chip">
+    <b>United by Fascination for Learning (UFL)</b>
+    <details>
+      <summary>Podcast-style YouTube series</summary>
+      <small>
+        Moral theories, conceptual engineering, AI & society.
+        <a href="https://www.youtube.com/@unitedbyfascinationforlearning" target="_blank" rel="noopener">Watch →</a>
+      </small>
+    </details>
+  </div>
+
+  <div class="chip">
+    <b>Mentor · IntoUniversity</b>
+    <details>
+      <summary>Academic confidence & curiosity</summary>
+      <small>Volunteer mentoring across disciplines; study skills and purpose-driven learning.</small>
+    </details>
+  </div>
+
+  <div class="chip">
+    <b>Communities</b>
+    <details>
+      <summary>SWIP UK · MAP · The Aristotelian Society</summary>
+      <small>Active participation; organizing, attending, and presenting discussions.</small>
+    </details>
+  </div>
+</div>
+
+<!-- GreenBeans Society -->
+<h2 class="section-title" id="greenbeans"><span class="dot"></span> GreenBeans Society · E-Waste Activism</h2>
+
+<div class="chips">
+  <div class="chip">
+    <b>What it is</b>
+    <small>First student-led e-waste movement in Chhattisgarh. Co-founder & President.</small>
+  </div>
+
+  <div class="chip">
+    <b>Impact</b>
+    <ul class="mini">
+      <li>Reached <b>100+ colleges</b> in ~3 months via campaigns & workshops</li>
+      <li>Convinced universities to <b>recycle legacy IT</b> instead of discarding</li>
+      <li>Shifted framing: e-waste as a <b>shared civic responsibility</b></li>
+    </ul>
+  </div>
+
+  <div class="chip">
+    <b>Media</b>
+    <small>
+      📺 <a href="https://youtu.be/OgPp5OKAzEU?si=7yFxgIxdfUA-qFaJ" target="_blank" rel="noopener">Intro video →</a>
+    </small>
+  </div>
+</div>
+
 
   <!-- PUBLICATIONS / WRITING -->
   <h2 class="section-title"><span class="dot"></span> Publications &amp; Writing</h2>
@@ -257,6 +302,27 @@ layout: default
         <!-- <p><a href="URL" target="_blank">Read the piece →</a></p> -->
       </div>
     </div>
+<!-- Book chapter -->
+<div class="acc-item">
+  <button class="acc-btn">
+    <span>
+      <i class="fas fa-book"></i>
+      Chapter — “AI, Human Values, and Social Transformation in Learning Societies”
+      <span style="margin-left:.4rem; opacity:.75">in <em>Future Learning with AI</em></span>
+    </span>
+    <i class="fas fa-chevron-down"></i>
+  </button>
+  <div class="acc-panel">
+    <p>
+      A chapter arguing for value-aligned AI in civic and educational infrastructures,
+      linking normative theories with deployable guardrails for learning systems.
+    </p>
+    <p><b>ISBN:</b> <!-- add ISBN here --> <span style="opacity:.75">[add ISBN]</span></p>
+    <!-- Optional external link -->
+    <!-- <p><a href="LINK_TO_BOOK_OR_CHAPTER" target="_blank" rel="noopener">View publication →</a></p> -->
+  </div>
+</div>
+
 
    <div class="acc-item">
       <button class="acc-btn">
@@ -270,6 +336,8 @@ layout: default
     </div>
 
   </div>
+
+
 
   <!-- MEDIA / LINKS -->
   <h2 class="section-title"><span class="dot"></span> Media &amp; Links</h2>
