@@ -12,28 +12,25 @@
 
 <!-- Sidebar -->
 <aside class="sidebar" style="width: 260px; background-color: #111; font-family: 'Space Grotesk', sans-serif; padding: 20px; color: #fff; height: 100vh; position: fixed;">
-  <!-- Avatar -->
   <div class="sidebar-avatar" style="text-align: center; margin-bottom: 20px;">
     <img src="{{ site.avatar }}" alt="Avatar" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
     <h2 style="font-size: 1.4rem; margin-top: 10px;">{{ site.title }}</h2>
     <p style="font-size: 0.85rem; color: #aaa;">{{ site.tagline }}</p>
   </div>
 
-<!-- Nav Links -->
-<nav class="sidebar-nav" style="margin-top: 30px;">
-  <ul style="list-style: none; padding: 0;">
-    {% assign tabs = site.tabs | sort: 'order' %}
-    {% for tab in tabs %}
-    <li style="margin-bottom: 12px;">
-      <a href="{{ tab.url | relative_url }}" class="sidebar-link" style="color: #ddd; font-size: 1rem; text-decoration: none; padding: 6px 10px; display: block; border-radius: 6px; transition: all 0.2s ease;">
-        <i class="fas fa-{{ tab.icon }}" style="margin-right: 8px;"></i> {{ tab.title }}
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-</nav>
+  <nav class="sidebar-nav" style="margin-top: 30px;">
+    <ul style="list-style: none; padding: 0;">
+      {% assign tabs = site.tabs | sort: 'order' %}
+      {% for tab in tabs %}
+      <li style="margin-bottom: 12px;">
+        <a href="{{ tab.url | relative_url }}" class="sidebar-link" style="color: #ddd; font-size: 1rem; text-decoration: none; padding: 6px 10px; display: block; border-radius: 6px; transition: all 0.2s ease;">
+          <i class="fas fa-{{ tab.icon }}" style="margin-right: 8px;"></i> {{ tab.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
 
-  <!-- Social Icons -->
   <div class="sidebar-social" style="text-align: center; margin-top: 80px;">
     <a href="https://github.com/purvi9399" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fab fa-github fa-lg"></i></a>
     <a href="mailto:ipurvijain@gmail.com" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fas fa-envelope fa-lg"></i></a>
@@ -44,11 +41,9 @@
 </aside>
 
 <!-- Main Content -->
-
-<main style="margin-left: 280px; padding: 2rem 3rem; flex: 1; background-color: #edd3df; min-height: 100vh;">
+<main style="margin-left: 280px; padding: 2rem 3rem; flex: 1; background: linear-gradient(to bottom, #FFE4E1 0%, #FFFFFF 100%); min-height: 100vh;">
   {{ content }}
 </main>
-
 
 </body>
 </html>
