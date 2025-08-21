@@ -22,30 +22,58 @@ title: "AI Ethics Explorer"
 <!-- Featured Sections -->
 <div style="max-width: 900px; margin: 4rem auto; font-family: 'Fira Sans', sans-serif;">
   <h2>Featured Sections</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-    <a href="/tabs/projects" class="card-hover">
-      <strong>Projects</strong><br>Mini tools, ethical experiments, and AI prototypes.
+
+  <style>
+    /* make the cards land nicely in a responsive grid */
+    .feature-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .feature-card .title{
+      display:flex; align-items:center; gap:.5rem; font-weight:700;
+    }
+    .feature-card i{ color:#8a2be2; }
+  </style>
+
+  <div class="feature-grid">
+    <a href="/tabs/projects" class="card-hover feature-card">
+      <div class="title"><i class="fas fa-code"></i> Projects</div>
+      <div>Mini tools, ethical experiments, and AI prototypes.</div>
     </a>
-    <a href="/tabs/ethical" class="card-hover">
-      <strong>Ethical Writing</strong><br>Essays on fairness, justice, and tech futures.
+
+    <a href="/tabs/ethical" class="card-hover feature-card">
+      <div class="title"><i class="fas fa-pen-nib"></i> Ethical Writing</div>
+      <div>Essays on fairness, justice, and tech futures.</div>
     </a>
-    <a href="/posts" class="card-hover">
-      <strong>Blogs</strong><br>Thoughts on research, reflection, and learning.
+
+    <a href="/posts" class="card-hover feature-card">
+      <div class="title"><i class="fas fa-feather-alt"></i> Blogs</div>
+      <div>Thoughts on research, reflection, and learning.</div>
+    </a>
+
+    <!-- NEW: Travel Vlog -->
+    <a href="https://www.youtube.com/@unitedbyfascinationforlearning" target="_blank" rel="noopener" class="card-hover feature-card">
+      <div class="title"><i class="fas fa-compass"></i> Travel Vlog</div>
+      <div>Slow travel, city stories, and creative field notes.</div>
     </a>
   </div>
 
-  <h2 style="margin-top: 3rem;"> Why AI Needs Philosophy?</h2>
+  <h2 style="margin-top: 3rem;">Why AI Needs Philosophy?</h2>
   <p>
     Technology shapes the world, but ethics shapes technology. This space is where code meets conscience.
-<p>
-AI is not just about data and decisions — it’s about values, power, and people. Philosophy asks the questions that technology often ignores: What is fairness? 
-Who gets to decide? What kind of future are we building? This section is where I reflect on the ethical assumptions embedded in our systems and ask how we can do better,
-not just as engineers, but as citizens. Philosophy doesn’t slow down innovation; it gives it direction.
+  </p>
+  <p>
+    AI is not just about data and decisions — it’s about values, power, and people. Philosophy asks the questions that
+    technology often ignores: What is fairness? Who gets to decide? What kind of future are we building? This section is
+    where I reflect on the ethical assumptions embedded in our systems and ask how we can do better, not just as engineers,
+    but as citizens. Philosophy doesn’t slow down innovation; it gives it direction.
   </p>
 
   <h3>Recent Blog</h3>
   <p><a href="/posts/2025-07-22-welcome">Welcome to AI Ethics Explorer →</a></p>
 </div>
+
 
 <!-- 🎙️ YouTube Podcast Section -->
 <div style="max-width: 900px; margin: 4rem auto; text-align: center; font-family: 'Fira Sans', sans-serif;">
