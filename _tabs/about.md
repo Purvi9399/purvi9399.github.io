@@ -289,4 +289,230 @@ layout: default
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-<div class="
+<div class="about-wrap" role="main">
+
+  <!-- Big Description Hero -->
+  <section class="hero" role="banner" aria-label="Introduction to Purvi Jain">
+    <div class="pic">
+      <img src="{{ site.avatar }}" alt="Purvi Jain, technologist and philosopher">
+    </div>
+    <div>
+      <h1>Hi, I’m <span class="underline">Purvi Jain</span></h1>
+      <p>Technologist by training, philosopher by calling, and environmental activist at heart. I explore how we design <em>just</em> digital systems, asking: How can technology amplify fairness, sustainability, and human dignity? My journey spans coding in India, debating ethics in Glasgow, and leading grassroots movements—blending tech with purpose to create a better future.</p>
+      <div class="personal-note">From unraveling AI’s moral complexities to turning e-waste into a civic mission, I’m driven by curiosity and a commitment to ethical innovation. Let’s connect to shape a world where tech serves us all.</div>
+    </div>
+  </section>
+
+  <!-- What I Do -->
+  <h2 class="section-title"><span class="dot"></span> What I Do</h2>
+  <div class="chips">
+    <div class="chip">
+      <b>AI Ethics Research</b>
+      <small>Developing frameworks to integrate Rawls’ Theory of Justice into AI, tackling bias and fairness.</small>
+      <div class="t-reflection">I aim to make AI a tool for equity, not division.</div>
+    </div>
+    <div class="chip">
+      <b>Environmental Activism</b>
+      <small>Leading e-waste initiatives and advocating for sustainable tech practices.</small>
+      <div class="t-reflection">Tech should heal, not harm, our planet.</div>
+    </div>
+    <div class="chip">
+      <b>Interdisciplinary Learning</b>
+      <small>Hosting podcasts and reading groups on AI, philosophy, and society.</small>
+      <div class="t-reflection">Connecting ideas across fields fuels my passion.</div>
+    </div>
+    <div class="chip">
+      <b>Education & Writing</b>
+      <small>Mentoring students and writing on AI ethics and social justice.</small>
+      <div class="t-reflection">Sharing knowledge to inspire change is my joy.</div>
+    </div>
+  </div>
+
+  <!-- Education Timeline -->
+  <h2 class="section-title"><span class="dot"></span> Education Timeline</h2>
+  <div class="timeline" role="region" aria-label="Purvi's academic timeline">
+    <div class="t-item">
+      <div class="t-role">Workshop on LLMs & Philosophy</div>
+      <div class="t-org">Berlin — May 2025</div>
+      <p class="t-note">Explored semantic, cognitive, and moral implications of foundation models and prompting’s role in decision-making.</p>
+      <div class="t-reflection">A philosophical dive into AI’s future.</div>
+    </div>
+    <div class="t-item">
+      <div class="t-role">Summer School in Ethics of AI</div>
+      <div class="t-org">London School of Economics</div>
+      <p class="t-note">Studied transparency, epistemic authority, and LLMs from ethical and political lenses.</p>
+      <div class="t-reflection">Learned how power shapes AI ethics.</div>
+    </div>
+    <div class="t-item">
+      <div class="t-role">Master’s in Philosophy</div>
+      <div class="t-org">University of Glasgow</div>
+      <p class="t-note">Dissertation: <em>Towards an Unbiased AI: Integrating Rawls’ Theory of Justice into Ethical AI Frameworks</em>.</p>
+      <div class="t-reflection">A cornerstone of my mission to align tech with justice.</div>
+    </div>
+    <div class="t-item">
+      <div class="t-role">Bachelor’s in Information Technology</div>
+      <div class="t-org">National Institute of Technology Raipur, India</div>
+      <p class="t-note">Laid the foundation with coding, sparking my interest in tech’s ethical challenges.</p>
+      <div class="t-reflection">Where my journey began.</div>
+    </div>
+  </div>
+
+  <!-- Publications -->
+  <h2 class="section-title"><span class="dot"></span> Publications</h2>
+  <div class="accordion" id="pubs">
+    <div class="acc-item">
+      <button class="acc-btn" aria-expanded="false" aria-controls="pub1">
+        <span><i class="fas fa-book-open"></i> Noctua — “Technological Change and the Evolution of Perspectives on Artificial Consciousness.”</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="acc-panel" id="pub1">
+        <p>Philosophical reflections on how technological shifts redefine theories of mind and moral status.</p>
+        <div class="acc-reflection">A deep exploration of AI’s consciousness debate.</div>
+      </div>
+    </div>
+    <div class="acc-item">
+      <button class="acc-btn" aria-expanded="false" aria-controls="pub2">
+        <span><i class="fas fa-book"></i> Chapter — “AI, Human Values, and Social Transformation in Learning Societies” <span style="margin-left:.4rem; opacity:.75">in <em>Future Learning with AI</em></span></span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="acc-panel" id="pub2">
+        <p>Argues for value-aligned AI in educational and civic systems, blending normative theory with practical guardrails.</p>
+        <div class="acc-reflection">A vision for ethical AI in education.</div>
+        <p><b>ISBN:</b> [add ISBN]</p>
+      </div>
+    </div>
+    <div class="acc-item">
+      <button class="acc-btn" aria-expanded="false" aria-controls="pub3">
+        <span><i class="fab fa-medium"></i> Medium Essays — AI ethics, environmental impacts, techno-social justice</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="acc-panel" id="pub3">
+        <p>Accessible writings on fairness, transparency, and design justice.</p>
+        <div class="acc-reflection">Bridging complex ideas with real-world impact.</div>
+        <p><a href="https://medium.com/@passionatepurvi07" target="_blank" rel="noopener">Visit my Medium profile →</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GreenBeans Initiative -->
+  <h2 class="section-title"><span class="dot"></span> GreenBeans Initiative</h2>
+  <div class="chips">
+    <div class="chip">
+      <b>Mission</b>
+      <small>First student-led e-waste movement in Chhattisgarh, co-founded and led by me.</small>
+      <div class="t-reflection">I co-founded and continue to serve as the President of GreenBeans, the first-ever student-led e-waste movement in Chhattisgarh. What began as a small group of just three or four friends driven by concern for the environment has now grown into a community of over 30 active members. GreenBeans was born out of a simple but urgent idea: to spread awareness about the dangers of electronic waste in a state where this conversation had never truly begun.
+
+As pioneers in this space, we worked closely with Raipur Smart City and the Chhattisgarh Environment Conservation Board (CECB), creating impactful projects that linked young people with city-level sustainability efforts. Alongside awareness campaigns, we also organized plantation drives, educational events, and community workshops, showing that environmental action can be both hands-on and deeply collaborative.
+
+What started as a small initiative among friends has become a movement that inspires others to rethink waste, sustainability, and their role in protecting our shared future.</div>
+    </div>
+    <div class="chip">
+      <b>Impact</b>
+      <ul class="mini" style="list-style-type: disc; padding-left: 1rem; color: var(--ink);">
+        <li>Reached 100+ colleges in ~3 months via campaigns & workshops</li>
+        <li>Convinced universities to recycle legacy IT</li>
+        <li>Framed e-waste as a shared civic responsibility</li>
+      </ul>
+      <div class="t-reflection">A testament to collective environmental action.</div>
+    </div>
+    <div class="chip">
+      <b>Video Story</b>
+      <small>📺 <a href="https://youtu.be/OgPp5OKAzEU?si=7yFxgIxdfUA-qFaJ" target="_blank" rel="noopener">Watch our journey →</a></small>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/OgPp5OKAzEU" title="GreenBeans Society Intro Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Other Initiatives -->
+  <h2 class="section-title"><span class="dot"></span> Other Initiatives</h2>
+  <div class="chips">
+    <div class="chip">
+      <b>Reading Group · LLMs & Philosophy</b>
+      <details>
+        <summary>Interdisciplinary forum at Glasgow</summary>
+        <small>Ongoing series bridging systems, semantics, and ethics with faculty & students.</small>
+        <div class="t-reflection">A space for intellectual growth.</div>
+      </details>
+    </div>
+    <div class="chip">
+      <b>United by Fascination for Learning (UFL)</b>
+      <details>
+        <summary>Podcast-style YouTube series</summary>
+        <small>Explores moral theories, AI & society. <a href="https://www.youtube.com/@unitedbyfascinationforlearning" target="_blank" rel="noopener">Watch →</a></small>
+        <div class="t-reflection">Sharing stories that connect tech and humanity.</div>
+      </details>
+    </div>
+    <div class="chip">
+      <b>Mentor · IntoUniversity</b>
+      <details>
+        <summary>Academic confidence & curiosity</summary>
+        <small>Volunteer mentoring across disciplines; study skills and purpose-driven learning.</small>
+        <div class="t-reflection">Guiding students to find their passion.</div>
+      </details>
+    </div>
+    <div class="chip">
+      <b>Communities</b>
+      <details>
+        <summary>Society for Women in Philosophy UK · Minorities in Philosophy · The Aristotelian Society</summary>
+        <small>Active participation; organizing and presenting discussions.</small>
+        <div class="t-reflection">Growing through diverse philosophical voices.</div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Option to Collaborate -->
+  <h2 class="section-title"><span class="dot"></span> Collaborate With Me</h2>
+  <div class="cta">
+    <h3 style="margin:0;">Let’s Build Thoughtful Tech Together</h3>
+    <p>I’m open to collaborations, guest lectures, research partnerships, or workshops on AI ethics, sustainability, and design justice. Let’s create something impactful!</p>
+    <a class="btn" href="mailto:ipurvijain@gmail.com">Email me</a>
+  </div>
+
+</div>
+
+<!-- JS for Fancy Animations -->
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".hero", { opacity: 0, y: -50, duration: 1, ease: "power2.out" });
+  gsap.utils.toArray('.section-title').forEach(title => {
+    gsap.from(title, {
+      opacity: 0,
+      x: -50,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: title,
+        start: "top 80%",
+      }
+    });
+  });
+  gsap.utils.toArray('.t-item, .chip, .log-item, .media-card, .acc-item').forEach((item, i) => {
+    gsap.from(item, {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      delay: i * 0.15,
+      scrollTrigger: {
+        trigger: item,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+  });
+
+  document.querySelectorAll('.acc-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = btn.nextElementSibling;
+      const isOpen = panel.style.display === 'block';
+      document.querySelectorAll('.acc-panel').forEach(p => p.style.display = 'none');
+      document.querySelectorAll('.acc-btn i.fas.fa-chevron-down').forEach(i => i.style.transform = 'rotate(0deg)');
+      document.querySelectorAll('.acc-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      if (!isOpen) {
+        panel.style.display = 'block';
+        btn.querySelector('i.fas.fa-chevron-down').style.transform = 'rotate(180deg)';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
