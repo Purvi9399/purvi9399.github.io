@@ -1,3 +1,5 @@
+this is my default.html right now - 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
 <body style="margin: 0; padding: 0; display: flex;">
 
 <!-- Sidebar -->
-<aside class="sidebar" style="width: 260px; font-family: 'Space Grotesk', sans-serif; padding: 20px; color: #fff; height: 100vh; position: fixed; background: linear-gradient(45deg, #6B7280, #10B981); animation: sidebarGradient 10s infinite;">
+<aside class="sidebar" style="width: 260px; background-color: #111; font-family: 'Space Grotesk', sans-serif; padding: 20px; color: #fff; height: 100vh; position: fixed;">
   <div class="sidebar-avatar" style="text-align: center; margin-bottom: 20px;">
     <img src="{{ site.avatar }}" alt="Avatar" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
     <h2 style="font-size: 1.4rem; margin-top: 10px;">{{ site.title }}</h2>
@@ -32,14 +34,11 @@
   </nav>
 
   <div class="sidebar-social" style="text-align: center; margin-top: 80px;">
-    <button class="collapsible" style="width: 100%; background: #8B5CF6; color: white; padding: 10px; border: none; border-radius: 6px; cursor: pointer;">Social Links <i class="fas fa-chevron-down"></i></button>
-    <div class="social-content" style="display: none; padding: 10px 0;">
-      <a href="https://github.com/purvi9399" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fab fa-github fa-lg"></i></a>
-      <a href="mailto:ipurvijain@gmail.com" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fas fa-envelope fa-lg"></i></a>
-      <a href="https://www.linkedin.com/in/purvi-jain7" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fab fa-linkedin fa-lg"></i></a>
-      <a href="https://www.youtube.com/@unitedbyfascinationforlearning" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fab fa-youtube fa-lg"></i></a>
-      <a href="https://medium.com/@passionatepurvi07" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fab fa-medium fa-lg"></i></a>
-    </div>
+    <a href="https://github.com/purvi9399" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fab fa-github fa-lg"></i></a>
+    <a href="mailto:ipurvijain@gmail.com" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fas fa-envelope fa-lg"></i></a>
+    <a href="https://www.linkedin.com/in/purvi-jain7" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fab fa-linkedin fa-lg"></i></a>
+    <a href="https://www.youtube.com/@unitedbyfascinationforlearning" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fab fa-youtube fa-lg"></i></a>
+    <a href="https://medium.com/@passionatepurvi07" target="_blank" style="margin: 0 8px; color: #bbb;"><i class="fab fa-medium fa-lg"></i></a>
   </div>
 </aside>
 
@@ -48,37 +47,5 @@
   {{ content }}
 </main>
 
-<!-- CSS for Sidebar Enhancements -->
-<style>
-  .sidebar-link i {
-    transition: transform 0.3s ease;
-  }
-  .sidebar-link:hover i {
-    transform: rotate(15deg) scale(1.2);
-  }
-  .sidebar {
-    background: linear-gradient(45deg, #6B7280, #10B981);
-    animation: sidebarGradient 10s infinite;
-  }
-  @keyframes sidebarGradient {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
-  }
-</style>
-
-<!-- JavaScript for Collapsible Section -->
-<script>
-  document.querySelector('.collapsible').addEventListener('click', function() {
-    const content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-      this.querySelector('i').style.transform = 'rotate(0deg)';
-    } else {
-      content.style.display = "block";
-      this.querySelector('i').style.transform = 'rotate(180deg)';
-    }
-  });
-</script>
 </body>
 </html>
