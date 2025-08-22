@@ -5,458 +5,235 @@ order: 3
 layout: default
 ---
 
-<!-- Custom Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-
-<!-- Ethical Writing Page Styles -->
-<style>
-  :root {
-    --ink: #2D3748;
-    --muted: #718096;
-    --accent: #F472B6; /* Light pinkish accent */
-    --accent-2: #ED64A6; /* Deeper pink for highlights */
-    --chip: #FFF5F7; /* Very light pink */
-    --card: #fff;
-    --ring: rgba(0,0,0,.08);
-    --background-gradient: linear-gradient(to bottom, #FFE4E1 0%, #FFFFFF 100%);
-    --fancy-shadow: 0 10px 30px rgba(244, 114, 182, .2);
-  }
-
-  .ethical-wrap {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 2.25rem 1.25rem 4rem;
-    font-family: "Montserrat", sans-serif;
-    color: var(--ink);
-    background: var(--background-gradient);
-    border-radius: 16px;
-    box-shadow: var(--fancy-shadow);
-  }
-
-  .hero {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem 1rem;
-    background: rgba(244, 114, 182, 0.05);
-    border-radius: 16px;
-    box-shadow: var(--fancy-shadow);
-  }
-  .hero h1 {
-    font-size: clamp(2rem, 1.5rem + 2vw, 2.75rem);
-    font-family: "Philosopher", serif;
-    color: var(--accent);
-    margin-bottom: 1rem;
-  }
-  .hero p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: var(--muted);
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  .hero .quote {
-    font-style: italic;
-    color: var(--accent-2);
-    margin-top: 1rem;
-    border-left: 4px solid var(--accent);
-    padding-left: 1rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-    font-family: "Philosopher", serif;
-    color: var(--accent-2);
-    margin: 3rem 0 1.5rem;
-    position: relative;
-  }
-  .section-title::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 2px;
-    background: var(--accent);
-    margin-top: 0.5rem;
-  }
-
-  .papers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  .paper-card {
-    background: url('/assets/img/vintage-paper-bg.jpg') no-repeat center/cover;
-    position: relative;
-    height: 250px;
-    transform: rotate(-2deg); /* Random rotation for handmade feel */
-    border: 1px solid rgba(244, 114, 182, 0.2);
-    cursor: pointer;
-    transition: transform 0.4s ease;
-  }
-  .paper-card:nth-child(even) {
-    transform: rotate(2deg);
-  }
-  .paper-card:hover {
-    transform: rotate(0) scale(1.05);
-  }
-  .paper-overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(255,255,255,0.3);
-    border-radius: 16px;
-  }
-  .paper-content {
-    position: relative;
-    z-index: 1;
-    padding: 1rem;
-    text-align: center;
-    color: #4A1A0A; /* Ink-like color */
-    font-family: "Philosopher", serif;
-    font-style: italic;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  }
-  .paper-roll {
-    display: none;
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    overflow-y: auto;
-    padding: 1.5rem;
-    background: url('/assets/img/vintage-paper-bg.jpg') no-repeat center/cover;
-    border-radius: 16px;
-    color: #4A1A0A;
-    font-family: "Montserrat", sans-serif;
-  }
-  .unrolled .paper-roll {
-    display: block;
-  }
-  .unrolled .paper-content {
-    display: none;
-  }
-  .paper-card h3 {
-    font-size: 1.4rem;
-    font-family: "Philosopher", serif;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
-  }
-  .paper-card p {
-    font-size: 1rem;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-  .paper-card .tags {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  .paper-card .tag {
-    background: rgba(244, 114, 182, 0.1);
-    color: var(--accent);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-  }
-  .paper-card a.btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: background 0.3s ease;
-  }
-  .paper-card a.btn:hover {
-    background: var(--accent-2);
-  }
-  .comments-section {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: rgba(255,255,255,0.8);
-    border-radius: 8px;
-  }
-
-  .cta {
-    text-align: center;
-    margin-top: 4rem;
-    padding: 2rem;
-    background: rgba(244, 114, 182, 0.05);
-    border-radius: 16px;
-    box-shadow: var(--fancy-shadow);
-  }
-  .cta h2 {
-    font-size: 1.6rem;
-    font-family: "Philosopher", serif;
-    color: var(--accent);
-    margin-bottom: 1rem;
-  }
-  .cta p {
-    font-size: 1.1rem;
-    color: var(--muted);
-    margin-bottom: 1.5rem;
-  }
-  .cta a.btn {
-    padding: 0.75rem 1.5rem;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: background 0.3s ease;
-  }
-  .cta a.btn:hover {
-    background: var(--accent-2);
-  }
-
-  .upcoming {
-    margin-top: 4rem;
-    text-align: center;
-  }
-  .upcoming h2 {
-    font-size: 1.6rem;
-    font-family: "Philosopher", serif;
-    color: var(--accent);
-    margin-bottom: 1rem;
-  }
-  .upcoming p {
-    font-size: 1.1rem;
-    color: var(--muted);
-    margin-bottom: 1.5rem;
-  }
-  .upcoming .teaser {
-    background: var(--chip);
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: var(--fancy-shadow);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .upcoming .teaser h3 {
-    font-size: 1.2rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-  }
-  .upcoming .teaser p {
-    font-size: 1rem;
-    color: var(--muted);
-  }
-
-  @media (max-width: 600px) {
-    .ethical-wrap {
-      padding: 1.5rem 1rem;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ethical AI Papers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #fdfaf6 url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      font-family: 'Inter', sans-serif;
+      color: #2c2c2c;
+      padding: 2rem;
     }
-    .papers-grid {
-      grid-template-columns: 1fr;
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #6d3f3f;
     }
-  }
-</style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    .paper-container {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
 
-<div class="ethical-wrap">
+    .paper {
+      background: #fff8f2;
+      border: 1px solid #e2d1c3;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 4px 8px 18px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      transform: rotate(-1deg);
+    }
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>Ethical Writing</h1>
-    <p>My writings delve into the heart of AI ethics, challenging the boundaries of trust, identity, empathy, and care in technology. Each piece is a reflection on how we can build AI that truly serves humanity.</p>
-    <div class="quote">"Ethics is not a constraint on innovation; it's the compass that guides it." — Purvi Jain</div>
+    .paper:hover {
+      transform: rotate(0deg) scale(1.01);
+      box-shadow: 6px 10px 22px rgba(0,0,0,0.15);
+    }
+
+    .paper-header {
+      padding: 1.5rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-family: 'Cormorant Garamond', serif;
+      background: linear-gradient(to right, #f9e0d9, #fff8f2);
+      border-bottom: 1px dashed #d4b8a4;
+      position: relative;
+    }
+
+    .paper-header::after {
+      content: "✦";
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: #a25c5c;
+    }
+
+    .paper-content {
+      display: none;
+      padding: 1.5rem;
+      animation: unfold 0.5s ease forwards;
+    }
+
+    @keyframes unfold {
+      from { opacity: 0; transform: scaleY(0.8); }
+      to { opacity: 1; transform: scaleY(1); }
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin: 1rem 0;
+      padding: 0.6rem 1.2rem;
+      background: #f472b6;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .download-btn:hover {
+      background: #ec4899;
+    }
+
+    .related-reading {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #fff0f7;
+      border-left: 3px solid #f472b6;
+    }
+    .related-reading h3 {
+      margin-top: 0;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .related-reading ul {
+      padding-left: 1.2rem;
+    }
+
+    .comment-section {
+      margin-top: 2rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ethical AI Papers</h1>
+
+  <div class="paper-container">
+
+    <!-- Paper 1 -->
+    <div class="paper">
+      <div class="paper-header">Trustworthy for Whom? The Ethical Limits of Trust-Based AI Governance in the EU</div>
+      <div class="paper-content">
+        <p><strong>Abstract:</strong> xxx</p>
+        <a href="/assets/pdf/paper1.pdf" class="download-btn">Download PDF</a>
+
+        <div class="related-reading">
+          <h3>Related Reading</h3>
+          <ul>
+            <li><a href="/assets/pdf/related1.pdf">xxx Related Paper 1</a></li>
+            <li><a href="/assets/pdf/related2.pdf">xxx Related Paper 2</a></li>
+          </ul>
+        </div>
+
+        <div class="comment-section">
+          <h3>Comments</h3>
+          <div id="disqus_thread"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paper 2 -->
+    <div class="paper">
+      <div class="paper-header">Beyond Techno-Feudalism: Reclaiming Self-Sovereign Identity as Democratic Infrastructure</div>
+      <div class="paper-content">
+        <p><strong>Abstract:</strong> xxx</p>
+        <a href="/assets/pdf/paper2.pdf" class="download-btn">Download PDF</a>
+
+        <div class="related-reading">
+          <h3>Related Reading</h3>
+          <ul>
+            <li><a href="/assets/pdf/related3.pdf">xxx Related Paper 1</a></li>
+            <li><a href="/assets/pdf/related4.pdf">xxx Related Paper 2</a></li>
+          </ul>
+        </div>
+
+        <div class="comment-section">
+          <h3>Comments</h3>
+          <div id="disqus_thread"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paper 3 -->
+    <div class="paper">
+      <div class="paper-header">Artificial Empathy as Emotional Misrepresentation</div>
+      <div class="paper-content">
+        <p><strong>Abstract:</strong> xxx</p>
+        <a href="/assets/pdf/paper3.pdf" class="download-btn">Download PDF</a>
+
+        <div class="related-reading">
+          <h3>Related Reading</h3>
+          <ul>
+            <li><a href="/assets/pdf/related5.pdf">xxx Related Paper 1</a></li>
+            <li><a href="/assets/pdf/related6.pdf">xxx Related Paper 2</a></li>
+          </ul>
+        </div>
+
+        <div class="comment-section">
+          <h3>Comments</h3>
+          <div id="disqus_thread"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paper 4 -->
+    <div class="paper">
+      <div class="paper-header">A Moral Case Against First-Person Simulated Care by AI</div>
+      <div class="paper-content">
+        <p><strong>Abstract:</strong> xxx</p>
+        <a href="/assets/pdf/paper4.pdf" class="download-btn">Download PDF</a>
+
+        <div class="related-reading">
+          <h3>Related Reading</h3>
+          <ul>
+            <li><a href="/assets/pdf/related7.pdf">xxx Related Paper 1</a></li>
+            <li><a href="/assets/pdf/related8.pdf">xxx Related Paper 2</a></li>
+          </ul>
+        </div>
+
+        <div class="comment-section">
+          <h3>Comments</h3>
+          <div id="disqus_thread"></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Paper Display: Handmade Vintage Papers -->
-  <h2 class="section-title">My Papers</h2>
-  <div class="papers-grid">
-    <div class="paper-card" onclick="unrollScroll(this)">
-      <div class="paper-overlay"></div>
-      <div class="paper-content">
-        <h3>Trustworthy for Whom?</h3>
-        <p>The Ethical Limits of Trust-Based AI Governance in the European Union</p>
-      </div>
-      <div class="paper-roll">
-        <h3>Abstract</h3>
-        <p>[Your abstract here: An analysis of the EU's trust-based approach to AI governance, questioning who it truly serves and its ethical limitations in global contexts.]</p>
-        <div class="tags">
-          <span class="tag">AI Governance</span>
-          <span class="tag">Trust</span>
-          <span class="tag">EU Policy</span>
-        </div>
-        <a href="/assets/pdf/trustworthy.pdf" download class="btn">Download PDF</a>
-        <h4>Related Reading</h4>
-        <ul>
-          <li><a href="/assets/pdf/related1.pdf">Related Paper 1</a></li>
-          <li><a href="/assets/pdf/related2.pdf">Related Paper 2</a></li>
-        </ul>
-        <h4>Comments</h4>
-        <div id="comments1" class="comments-section">
-          <div id="disqus_thread1"></div>
-          <script>
-            var disqus_config = function () {
-              this.page.url = window.location.href + "#comments1";  // Unique URL for this paper
-              this.page.identifier = 'trustworthy'; // Unique identifier
-            };
-            (function() {
-              var d = document, s = d.createElement('script');
-              s.src = 'https://your-disqus-shortname.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-            })();
-          </script>
-        </div>
-      </div>
-    </div>
-
-    <div class="paper-card" onclick="unrollScroll(this)">
-      <div class="paper-overlay"></div>
-      <div class="paper-content">
-        <h3>Beyond Techno-Feudalism</h3>
-        <p>Reclaiming Self-Sovereign Identity as Democratic Infrastructure</p>
-      </div>
-      <div class="paper-roll">
-        <h3>Abstract</h3>
-        <p>[Your abstract here: Exploring how self-sovereign identity can counter techno-feudalism, positioning it as essential democratic infrastructure in the digital age.]</p>
-        <div class="tags">
-          <span class="tag">Self-Sovereign Identity</span>
-          <span class="tag">Democracy</span>
-          <span class="tag">Techno-Feudalism</span>
-        </div>
-        <a href="/assets/pdf/beyond-techno-feudalism.pdf" download class="btn">Download PDF</a>
-        <h4>Related Reading</h4>
-        <ul>
-          <li><a href="/assets/pdf/related3.pdf">Related Paper 3</a></li>
-          <li><a href="/assets/pdf/related4.pdf">Related Paper 4</a></li>
-        </ul>
-        <h4>Comments</h4>
-        <div id="comments2" class="comments-section">
-          <div id="disqus_thread2"></div>
-          <script>
-            var disqus_config = function () {
-              this.page.url = window.location.href + "#comments2";  // Unique URL for this paper
-              this.page.identifier = 'techno-feudalism'; // Unique identifier
-            };
-            (function() {
-              var d = document, s = d.createElement('script');
-              s.src = 'https://your-disqus-shortname.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-            })();
-          </script>
-        </div>
-      </div>
-    </div>
-
-    <div class="paper-card" onclick="unrollScroll(this)">
-      <div class="paper-overlay"></div>
-      <div class="paper-content">
-        <h3>Artificial Empathy as Emotional Misrepresentation</h3>
-      </div>
-      <div class="paper-roll">
-        <h3>Abstract</h3>
-        <p>[Your abstract here: A critique of artificial empathy, arguing that it often misrepresents emotions, leading to ethical dilemmas in human-AI interactions.]</p>
-        <div class="tags">
-          <span class="tag">Artificial Empathy</span>
-          <span class="tag">Emotional AI</span>
-          <span class="tag">Misrepresentation</span>
-        </div>
-        <a href="/assets/pdf/artificial-empathy.pdf" download class="btn">Download PDF</a>
-        <h4>Related Reading</h4>
-        <ul>
-          <li><a href="/assets/pdf/related5.pdf">Related Paper 5</a></li>
-          <li><a href="/assets/pdf/related6.pdf">Related Paper 6</a></li>
-        </ul>
-        <h4>Comments</h4>
-        <div id="comments3" class="comments-section">
-          <div id="disqus_thread3"></div>
-          <script>
-            var disqus_config = function () {
-              this.page.url = window.location.href + "#comments3";  // Unique URL for this paper
-              this.page.identifier = 'artificial-empathy'; // Unique identifier
-            };
-            (function() {
-              var d = document, s = d.createElement('script');
-              s.src = 'https://your-disqus-shortname.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-            })();
-          </script>
-        </div>
-      </div>
-    </div>
-
-    <div class="paper-card" onclick="unrollScroll(this)">
-      <div class="paper-overlay"></div>
-      <div class="paper-content">
-        <h3>A Moral Case Against First-Person Simulated Care by AI</h3>
-      </div>
-      <div class="paper-roll">
-        <h3>Abstract</h3>
-        <p>[Your abstract here: Making a moral argument against AI-simulated care in first-person interactions, highlighting the risks to genuine human connections.]</p>
-        <div class="tags">
-          <span class="tag">AI Care</span>
-          <span class="tag">Moral Ethics</span>
-          <span class="tag">Human-AI Relations</span>
-        </div>
-        <a href="/assets/pdf/simulated-care.pdf" download class="btn">Download PDF</a>
-        <h4>Related Reading</h4>
-        <ul>
-          <li><a href="/assets/pdf/related7.pdf">Related Paper 7</a></li>
-          <li><a href="/assets/pdf/related8.pdf">Related Paper 8</a></li>
-        </ul>
-        <h4>Comments</h4>
-        <div id="comments4" class="comments-section">
-          <div id="disqus_thread4"></div>
-          <script>
-            var disqus_config = function () {
-              this.page.url = window.location.href + "#comments4";  // Unique URL for this paper
-              this.page.identifier = 'simulated-care'; // Unique identifier
-            };
-            (function() {
-              var d = document, s = d.createElement('script');
-              s.src = 'https://your-disqus-shortname.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-            })();
-          </script>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA for Collaborations -->
-  <div class="cta">
-    <h2 class="section-title">Interested in Collaboration?</h2>
-    <p>If my writings resonate with you, let's collaborate on ethical AI research, workshops, or co-authored pieces. Reach out!</p>
-    <a href="mailto:ipurvijain@gmail.com" class="btn">Contact Me</a>
-  </div>
-
-</div>
-
-<!-- JS for Unrolling Animation -->
-<script>
-  function unrollScroll(element) {
-    element.classList.toggle('unrolled');
-  }
-
-  document.querySelectorAll('.paper-card').forEach(card => {
-    card.addEventListener('click', () => unrollScroll(card));
-  });
-</script>
-
-<!-- GSAP Animations -->
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.utils.toArray('.paper-card').forEach((card, i) => {
-    gsap.from(card, {
-      opacity: 0,
-      y: 50,
-      duration: 0.8,
-      delay: i * 0.2,
-      scrollTrigger: {
-        trigger: card,
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
+  <script>
+    // Toggle unfold animation
+    document.querySelectorAll('.paper-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
     });
-  });
-</script>
 
-<!-- Disqus Comment Count -->
-<script id="dsq-count-scr" src="//your-disqus-shortname.disqus.com/count.js" async></script>
+    // Disqus embed (replace "your-disqus-shortname" with your real shortname)
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = window.location.pathname;
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://your-disqus-shortname.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+</body>
+</html>
+
