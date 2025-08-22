@@ -13,8 +13,8 @@ layout: default
   :root {
     --ink: #111;
     --muted: #595959;
-    --accent: #D81B60;          /* Bold magenta for name */
-    --accent-2: #C2185B;        /* Deeper magenta for headlines */
+    --accent: #FF69B4;          /* Bold magenta for name */
+    --accent-2: #899499;        /* Deeper magenta for headlines */
     --chip: #FFF0F5;            /* Very light pink */
     --card: #fff;
     --ring: rgba(0,0,0,.08);
@@ -64,7 +64,6 @@ layout: default
   color: var(--accent);
   font-family: 'Carolyna Pro Black', cursive;
   font-size: clamp(2.5rem, 2rem + 2vw, 3.5rem);
-  text-shadow: 0 2px 6px rgba(216,27,96,.4);
 }
   .hero p { margin: .75rem 0 0; color: var(--muted); font-size: 1.1rem; line-height: 1.6; }
   .hero .personal-note {
@@ -324,7 +323,7 @@ layout: default
   </div>
   <div>
     <h1>Hi, I’m <span class="underline">Purvi Jain</span> </h1>
-    <p>Technologist by training, philosopher by calling, and environmental activist at heart. I explore how we design <em>just</em> digital systems, asking: How can technology amplify fairness, sustainability, and human dignity? My journey spans coding in India, debating ethics in Glasgow, and leading grassroots movements—blending tech with purpose to create a better future.</p>
+    <p>Technologist by training, philosopher by calling, and environmental activist at heart. I explore how we design <em>just</em> digital systems, asking: How can technology amplify fairness, sustainability, and human dignity? My journey spans coding in India, debating ethics in Glasgow, and leading grassroots movements, blending tech with purpose to create a better future.</p>
     <div class="personal-note">From unraveling AI’s moral complexities to turning e-waste into a civic mission, I’m driven by curiosity and a commitment to ethical innovation. Let’s connect to shape a world where tech serves us all.</div>
   </div>
 </section>
