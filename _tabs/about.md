@@ -8,6 +8,7 @@ layout: default
 <!-- Custom Styles for a Fancy and Philosophical Design -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Space+Grotesk:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carolyna+Pro+Black&family=Great+Vibes&family=Space+Grotesk:wght@400;600&display=swap');
 
   :root {
     --ink: #111;
@@ -56,15 +57,15 @@ layout: default
   }
   .hero .pic:hover { transform: rotate(5deg) scale(1.05); }
   .hero .pic img { width: 100%; height: 100%; object-fit: cover; }
-  .hero h1 {
-    margin: 0;
-    line-height: 1.1;
-    letter-spacing: .3px;
-    color: var(--accent);
-    font-family: 'Great Vibes', cursive;
-    font-size: clamp(2.5rem, 2rem + 2vw, 3.5rem);
-    text-shadow: 0 2px 6px rgba(216,27,96,.4);
-  }
+.hero h1 {
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: .3px;
+  color: var(--accent);
+  font-family: 'Carolyna Pro Black', cursive;
+  font-size: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+  text-shadow: 0 2px 6px rgba(216,27,96,.4);
+}
   .hero p { margin: .75rem 0 0; color: var(--muted); font-size: 1.1rem; line-height: 1.6; }
   .hero .personal-note {
     margin-top: 1.25rem;
@@ -317,22 +318,26 @@ layout: default
 <div class="about-wrap" role="main">
 
   <!-- Big Description Hero -->
-  <section class="hero" role="banner" aria-label="Introduction to Purvi Jain">
-    <div class="pic">
-      <img src="{{ site.avatar }}" alt="Purvi Jain, technologist and philosopher">
-    </div>
-    <div>
-      <h1>Hi, I’m <span class="underline">Purvi Jain</span> 👋</h1>
-      <p>Technologist by training, philosopher by calling, and environmental activist at heart. I explore how we design <em>just</em> digital systems, asking: How can technology amplify fairness, sustainability, and human dignity? My journey spans coding in India, debating ethics in Glasgow, and leading grassroots movements—blending tech with purpose to create a better future.</p>
-      <div class="personal-note">From unraveling AI’s moral complexities to turning e-waste into a civic mission, I’m driven by curiosity and a commitment to ethical innovation. Let’s connect to shape a world where tech serves us all.</div>
-    </div>
-  </section>
+ <section class="hero" role="banner" aria-label="Introduction to Purvi Jain">
+  <div class="pic">
+    <img src="{{ site.avatar }}" alt="Purvi Jain, technologist and philosopher">
+  </div>
+  <div>
+    <h1>Hi, I’m <span class="underline">Purvi Jain</span> </h1>
+    <p>Technologist by training, philosopher by calling, and environmental activist at heart. I explore how we design <em>just</em> digital systems, asking: How can technology amplify fairness, sustainability, and human dignity? My journey spans coding in India, debating ethics in Glasgow, and leading grassroots movements—blending tech with purpose to create a better future.</p>
+    <div class="personal-note">From unraveling AI’s moral complexities to turning e-waste into a civic mission, I’m driven by curiosity and a commitment to ethical innovation. Let’s connect to shape a world where tech serves us all.</div>
+  </div>
+</section>
 
   <!-- Why I Do, What I Do -->
   <div class="philosophical-section">
-    <h3>Why I Do, What I Do</h3>
-    <p>I am Purvi Jain—a seeker of truth, a builder of bridges, and a guardian of our shared future. My work is not merely a career but a calling, rooted in the belief that technology, when wielded with intention, can heal divisions, uplift the marginalized, and steward our planet. From the bustling streets of India, where I first learned to code, to the hallowed halls of Glasgow, where I wrestled with Rawls’ vision of justice, my path has been one of relentless inquiry. I see AI not as a tool of efficiency but as a mirror of our values—reflecting our biases, our hopes, our humanity. My activism with e-waste stems from a deep reverence for nature, a recognition that every discarded device carries a story of waste and potential. To mentor, to write, to connect across disciplines is to plant seeds of wisdom in a world hungry for meaning. This is my purpose: to weave philosophy into the fabric of technology, ensuring that every line of code serves a greater good.</p>
-    <p class="reflection">At my core, I am a dreamer who acts—driven by the question: What kind of world do we want to leave behind?</p>
+    <h3>Why I Do, What I Do ?</h3>
+    <p>I’m Purvi Jain. For me, philosophy and technology aren’t just subjects I studied, they’re the threads I’ve been trying to weave together in everything I do. I started with code, but I kept asking bigger questions: what does it mean, who does it serve, and what kind of future are we building with it? That’s what led me from the streets of India to classrooms in Glasgow, where I spent time wrestling with ideas of justice and fairness.</p>
+
+<p>I don’t see AI as just a tool for efficiency; I see it as a reflection of us, our choices, our biases, our values. My work with e-waste came from the same place: a respect for the environment and a belief that even discarded things still carry meaning and potential.</p>
+
+<p>What drives me is connection — between people, between disciplines, between ideas. Whether I’m writing, mentoring, or building projects, I want to help make technology more humane, more just, and more thoughtful. That’s really my purpose: to bring philosophy into tech so that every line of code, every system we build, can be part of a better story for all of us..</p>
+    <p class="reflection">At my core, I’m a dreamer who puts ideas into action, guided by one question: what kind of world are we leaving behind?</p>
   </div>
 
   <!-- Education Timeline -->
@@ -347,20 +352,28 @@ layout: default
     <div class="t-item">
       <div class="t-role">Summer School in Ethics of AI</div>
       <div class="t-org">London School of Economics</div>
-      <p class="t-note">Studied transparency, epistemic authority, and LLMs from ethical and political lenses.</p>
-      <div class="t-reflection">Learned how power shapes AI ethics.</div>
+      <p class="t-note">Studied transparency, epistemic authority, and LLMs from ethical and political lenses. </p>
+      <div class="t-reflection">Examined how emerging technologies shape human agency, fairness, privacy, and global justice; explored anticipatory ethics and the governance of AI.</div>
     </div>
     <div class="t-item">
       <div class="t-role">Master’s in Philosophy</div>
       <div class="t-org">University of Glasgow</div>
       <p class="t-note">Dissertation: <em>Towards an Unbiased AI: Integrating Rawls’ Theory of Justice into Ethical AI Frameworks</em>.</p>
-      <div class="t-reflection">A cornerstone of my mission to align tech with justice.</div>
+      <div class="t-reflection"> <p>Logic & Critical Reasoning: Formal/informal logic, argumentation, and evaluation of ethical and metaphysical claims.</p>
+
+<p>Moral & Political Philosophy: Theories of justice, equality, rights, and responsibility (Rawls, Nozick, Sen, Nussbaum, etc.).</p></div>
     </div>
     <div class="t-item">
-      <div class="t-role">Bachelor’s in Information Technology / Computer Science</div>
-      <div class="t-org">India</div>
-      <p class="t-note">Laid the foundation with coding, sparking my interest in tech’s ethical challenges.</p>
-      <div class="t-reflection">Where my journey began.</div>
+      <div class="t-role">Bachelor’s in Information Technology</div>
+      <div class="t-org">National Institue of Technology Raipur, India</div>
+      <p class="t-note">During my undergraduate studies, I built a strong foundation in both theoretical and applied aspects of computer science. Key areas of learning included:</p>
+
+<p>Programming & Software Development: Proficiency in C, C++, Java, and Python; object-oriented programming; data structures and algorithms; software engineering practices.</p>
+
+<p>Systems & Networks: Operating systems, computer networks, distributed systems, and database management systems (SQL, NoSQL).</p>
+
+<p>Web & Application Development: Fundamentals of front-end and back-end development, exposure to frameworks and APIs.</p>
+      <div class="t-reflection"> Projects: Breast Cancer Classification, Bias checker using LIME </div>
     </div>
   </div>
 
