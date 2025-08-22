@@ -8,232 +8,554 @@ layout: default
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ethical AI Papers</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Ethical AI Papers — Archive</title>
+
+  <!-- Fonts: handwritten title + elegant serif + clean sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      margin: 0;
-      background: #fdfaf6 url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-      font-family: 'Inter', sans-serif;
-      color: #2c2c2c;
-      padding: 2rem;
+    :root{
+      --ink:#4b2e2e;
+      --rose:#f472b6;
+      --rose-dark:#ec4899;
+      --parchment:#fff7ef;
+      --parchment-deep:#f6e7d7;
+      --edge:#d9c2a7;
+      --shadow:rgba(0,0,0,.18);
+      --shadow-soft:rgba(0,0,0,.08);
+      --accent:#8a4f4f;
     }
 
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem;
-      text-align: center;
-      margin-bottom: 3rem;
-      color: #6d3f3f;
+    /* Page background: soft desk + gradient light */
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+      color:#2b2a2a;
+      background:
+        radial-gradient(1200px 800px at 70% -10%, #ffe7f2 0%, #fceef6 25%, #fdf7fa 50%, #fff 75%) fixed,
+        repeating-linear-gradient(45deg, rgba(0,0,0,.015) 0 8px, rgba(0,0,0,.02) 8px 16px) fixed;
+      padding:3.5rem 1rem 6rem;
     }
 
-    .paper-container {
-      max-width: 800px;
-      margin: 2rem auto;
+    .container{
+      max-width: 980px;
+      margin: 0 auto;
     }
 
-    .paper {
-      background: #fff8f2;
-      border: 1px solid #e2d1c3;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-      box-shadow: 4px 8px 18px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      overflow: hidden;
-      transform: rotate(-1deg);
+    /* Handwritten page title + micro glow */
+    .page-title{
+      font-family:"Homemade Apple", cursive;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      text-align:center;
+      color:var(--ink);
+      letter-spacing:.5px;
+      margin-bottom:.5rem;
+      filter: drop-shadow(0 2px 0 rgba(255,255,255,.7));
+    }
+    .page-sub{
+      text-align:center;
+      max-width: 760px;
+      margin: 0.75rem auto 2.5rem;
+      font-family:"Cormorant Garamond", serif;
+      font-size: clamp(1.05rem, 2.1vw, 1.25rem);
+      color:#634343;
+      line-height:1.55;
     }
 
-    .paper:hover {
-      transform: rotate(0deg) scale(1.01);
-      box-shadow: 6px 10px 22px rgba(0,0,0,0.15);
+    /* Desk adornments: quill, scroll, balance — subtle ambient motion */
+    .adornments{
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
     }
-
-    .paper-header {
-      padding: 1.5rem;
-      font-size: 1.4rem;
-      font-weight: 600;
-      font-family: 'Cormorant Garamond', serif;
-      background: linear-gradient(to right, #f9e0d9, #fff8f2);
-      border-bottom: 1px dashed #d4b8a4;
-      position: relative;
-    }
-
-    .paper-header::after {
-      content: "✦";
+    .adornments svg{
       position: absolute;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.2rem;
-      color: #a25c5c;
+      opacity:.22;
+      filter: drop-shadow(0 6px 10px var(--shadow-soft));
+      transform-origin: center;
+      animation: float 8s ease-in-out infinite;
+    }
+    .quill{left: max(12px, 1.5vw); bottom: 6vh; width: 90px; animation-delay: 0s}
+    .scroll-ico{right: 3vw; top: 12vh; width: 92px; animation-delay: .8s}
+    .balance{right: 5vw; bottom: 8vh; width: 110px; animation-delay: 1.6s}
+
+    @keyframes float {
+      0%,100%{ transform: translateY(0) rotate(-2deg) }
+      50%{ transform: translateY(-8px) rotate(1deg) }
     }
 
-    .paper-content {
-      display: none;
-      padding: 1.5rem;
-      animation: unfold 0.5s ease forwards;
+    /* Scroll/Parchment shell */
+    .archive{
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 22px;
     }
 
-    @keyframes unfold {
-      from { opacity: 0; transform: scaleY(0.8); }
-      to { opacity: 1; transform: scaleY(1); }
+    .scroll{
+      position: relative;
+      background: var(--parchment);
+      border: 1px solid var(--edge);
+      box-shadow:
+        0 14px 24px var(--shadow),
+        inset 0 1px 0 rgba(255,255,255,.8);
+      border-radius: 16px;
+      overflow: clip;
+      transform: rotate(-0.25deg);
+      transition: transform .25s ease, box-shadow .25s ease;
+      will-change: transform;
+    }
+    .scroll:hover{ transform: rotate(0deg) translateY(-2px) }
+    /* Torn bottom edge illusion */
+    .scroll::after{
+      content:"";
+      position:absolute; left:0; right:0; bottom: -1px; height: 22px;
+      background:
+        radial-gradient(14px 12px at 20px 0, rgba(0,0,0,.08), transparent 70%),
+        radial-gradient(16px 10px at 90% 0, rgba(0,0,0,.06), transparent 70%);
+      opacity:.25;
+      pointer-events:none;
     }
 
-    .download-btn {
-      display: inline-block;
-      margin: 1rem 0;
-      padding: 0.6rem 1.2rem;
-      background: #f472b6;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    .download-btn:hover {
-      background: #ec4899;
+    /* Rolled sides using pseudo elements */
+    .scroll::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,0)),
+        radial-gradient(20px 60px at 12px 40px, rgba(0,0,0,.08), transparent 60%) left no-repeat,
+        radial-gradient(20px 60px at calc(100% - 12px) 40px, rgba(0,0,0,.08), transparent 60%) right no-repeat;
+      background-size: auto, 24px 120px, 24px 120px;
+      pointer-events:none;
+      mix-blend-mode:multiply;
     }
 
-    .related-reading {
-      margin-top: 1rem;
-      padding: 1rem;
-      background: #fff0f7;
-      border-left: 3px solid #f472b6;
+    .head{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items:center;
+      padding: 22px 24px;
+      background:
+        linear-gradient(180deg, #f9e9dd 0, #fff7ef 70%);
+      border-bottom: 1px dashed #c9ad8c;
+      position:relative;
     }
-    .related-reading h3 {
-      margin-top: 0;
-      font-family: 'Cormorant Garamond', serif;
-    }
-    .related-reading ul {
-      padding-left: 1.2rem;
+    .title{
+      font-family:"Cormorant Garamond", serif;
+      font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+      color:#3c2a2a;
+      line-height:1.25;
     }
 
-    .comment-section {
-      margin-top: 2rem;
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
+    /* Wax seal button (breaks on open) */
+    .seal{
+      --size: 38px;
+      width: var(--size); height: var(--size);
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #ff8fbf 0, #f34e93 60%, #b02064 100%);
+      border: 2px solid #7b234e;
+      box-shadow: inset 0 6px 10px rgba(255,255,255,.3), 0 5px 10px var(--shadow);
+      position: relative;
+      cursor: pointer;
+      transition: transform .2s ease;
+    }
+    .seal:hover{ transform: scale(1.05) }
+    .seal::before{
+      /* stamp character */
+      content:"§";
+      position:absolute; inset: 0;
+      display:grid; place-items:center;
+      font-family:"Cormorant Garamond", serif;
+      color: #2b0b18; font-weight:700; font-size: 1.2rem;
+      text-shadow: 0 1px 0 rgba(255,255,255,.25);
+    }
+    .seal::after{
+      /* glossy streak */
+      content:"";
+      position:absolute; left: 22%; top: 10%;
+      width: 36%; height: 26%;
+      background: linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,255,255,0));
+      border-radius: 50%;
+      transform: rotate(-18deg);
+    }
+    .seal.broken{
+      background: radial-gradient(circle at 40% 30%, #f0a9c8 0, #c94183 60%, #6a183f 100%);
+      transform: scale(.96) rotate(-4deg);
+      box-shadow: inset 0 10px 16px rgba(0,0,0,.25), 0 6px 16px var(--shadow);
+    }
+    .seal.broken .crack{
+      opacity:1;
+    }
+    .crack{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, transparent 44%, rgba(0,0,0,.55) 46%, transparent 52%),
+        linear-gradient(90deg, transparent 49%, rgba(255,255,255,.7) 50%, transparent 51%);
+      mix-blend-mode: overlay;
+      opacity:0;
+      transition: opacity .25s ease;
+      clip-path: polygon(50% 6%, 54% 16%, 46% 30%, 58% 44%, 42% 59%, 56% 75%, 50% 94%, 49% 100%, 52% 100%, 52% 6%);
+    }
+
+    /* The content panel that unrolls */
+    .content{
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .6s cubic-bezier(.25,.8,.25,1);
+      background:
+        linear-gradient(180deg, #fff7ef, #fffdf9);
+      padding: 0 24px;
+    }
+    .content-inner{
+      padding: 16px 0 24px;
+    }
+    .content.open{ /* helper class applied in JS – not used directly */ }
+
+    .abstract{
+      font-size: 1rem;
+      line-height:1.65;
+      color:#3f2f2f;
+    }
+
+    .actions{
+      display:flex; gap:12px; flex-wrap: wrap;
+      margin: 14px 0 6px;
+    }
+    .btn{
+      display:inline-block;
+      padding:.6rem 1rem;
+      border-radius: 8px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid #b88a8a;
+      background: linear-gradient(180deg, #ffd3ea, #fbb6d4);
+      color:#4a2432;
+      box-shadow: 0 3px 10px var(--shadow-soft);
+      transition: transform .15s ease, background .2s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); background: linear-gradient(180deg, #ffc4e3, #f99cc6) }
+
+    /* Related reading as marginal notes (on wide screens) */
+    .meta{
+      display:grid; grid-template-columns: 1fr; gap: 18px;
+      margin-top: 12px;
+    }
+    @media (min-width: 840px){
+      .meta{
+        grid-template-columns: 1.2fr .9fr;
+      }
+    }
+
+    .related{
+      background: #fff1f7;
+      border-left: 4px solid var(--rose);
+      padding: 12px 14px;
+      border-radius: 8px;
+    }
+    .related h4{
+      margin:0 0 6px;
+      font-family:"Cormorant Garamond", serif;
+      font-size: 1.1rem;
+      color:#5b2d2d;
+    }
+    .related ul{ margin:0; padding-left: 1rem; }
+    .related li{ margin:6px 0 }
+    .related a{ color:#7a2c49; text-decoration: underline }
+
+    /* Comments block (Disqus) */
+    .comments{
+      margin-top: 8px;
+      border-top: 1px dashed #d7bda1;
+      padding-top: 12px;
+    }
+    .comments h4{
+      font-family:"Cormorant Garamond", serif;
+      margin:.25rem 0 .5rem;
+      color:#5b2d2d;
+    }
+
+    /* Small “ink pulse” when opening */
+    .ink-pulse{
+      position:absolute; inset:0; pointer-events:none; opacity:0;
+      background: radial-gradient(circle at var(--x,50%) var(--y,50%), rgba(138,79,79,.08), transparent 40%);
+      transition: opacity .45s ease;
+    }
+    .ink-pulse.show{ opacity:1 }
+
+    /* Focus styles for accessibility */
+    .seal:focus-visible, .btn:focus-visible{
+      outline: 3px solid #9b6b6b; outline-offset: 3px;
     }
   </style>
 </head>
 <body>
-  <h1>Ethical AI Papers</h1>
-
-  <div class="paper-container">
-
-    <!-- Paper 1 -->
-    <div class="paper">
-      <div class="paper-header">Trustworthy for Whom? The Ethical Limits of Trust-Based AI Governance in the EU</div>
-      <div class="paper-content">
-        <p><strong>Abstract:</strong> xxx</p>
-        <a href="/assets/pdf/paper1.pdf" class="download-btn">Download PDF</a>
-
-        <div class="related-reading">
-          <h3>Related Reading</h3>
-          <ul>
-            <li><a href="/assets/pdf/related1.pdf">xxx Related Paper 1</a></li>
-            <li><a href="/assets/pdf/related2.pdf">xxx Related Paper 2</a></li>
-          </ul>
-        </div>
-
-        <div class="comment-section">
-          <h3>Comments</h3>
-          <div id="disqus_thread"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Paper 2 -->
-    <div class="paper">
-      <div class="paper-header">Beyond Techno-Feudalism: Reclaiming Self-Sovereign Identity as Democratic Infrastructure</div>
-      <div class="paper-content">
-        <p><strong>Abstract:</strong> xxx</p>
-        <a href="/assets/pdf/paper2.pdf" class="download-btn">Download PDF</a>
-
-        <div class="related-reading">
-          <h3>Related Reading</h3>
-          <ul>
-            <li><a href="/assets/pdf/related3.pdf">xxx Related Paper 1</a></li>
-            <li><a href="/assets/pdf/related4.pdf">xxx Related Paper 2</a></li>
-          </ul>
-        </div>
-
-        <div class="comment-section">
-          <h3>Comments</h3>
-          <div id="disqus_thread"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Paper 3 -->
-    <div class="paper">
-      <div class="paper-header">Artificial Empathy as Emotional Misrepresentation</div>
-      <div class="paper-content">
-        <p><strong>Abstract:</strong> xxx</p>
-        <a href="/assets/pdf/paper3.pdf" class="download-btn">Download PDF</a>
-
-        <div class="related-reading">
-          <h3>Related Reading</h3>
-          <ul>
-            <li><a href="/assets/pdf/related5.pdf">xxx Related Paper 1</a></li>
-            <li><a href="/assets/pdf/related6.pdf">xxx Related Paper 2</a></li>
-          </ul>
-        </div>
-
-        <div class="comment-section">
-          <h3>Comments</h3>
-          <div id="disqus_thread"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Paper 4 -->
-    <div class="paper">
-      <div class="paper-header">A Moral Case Against First-Person Simulated Care by AI</div>
-      <div class="paper-content">
-        <p><strong>Abstract:</strong> xxx</p>
-        <a href="/assets/pdf/paper4.pdf" class="download-btn">Download PDF</a>
-
-        <div class="related-reading">
-          <h3>Related Reading</h3>
-          <ul>
-            <li><a href="/assets/pdf/related7.pdf">xxx Related Paper 1</a></li>
-            <li><a href="/assets/pdf/related8.pdf">xxx Related Paper 2</a></li>
-          </ul>
-        </div>
-
-        <div class="comment-section">
-          <h3>Comments</h3>
-          <div id="disqus_thread"></div>
-        </div>
-      </div>
-    </div>
-
+  <div class="adornments" aria-hidden="true">
+    <!-- Quill -->
+    <svg class="quill" viewBox="0 0 128 128">
+      <path d="M98 12C70 18 44 44 30 68c-8 14-10 24-6 28 5 5 16 2 30-6 24-14 50-40 56-68-8-4-8-4-12-10z" fill="#6b3241"/>
+      <path d="M24 100c20-6 56-28 76-64" stroke="#2b151b" stroke-width="3" fill="none"/>
+    </svg>
+    <!-- Scroll icon -->
+    <svg class="scroll-ico" viewBox="0 0 128 128">
+      <rect x="16" y="18" width="96" height="92" rx="8" fill="#f2ddc6" stroke="#b8926f" stroke-width="3"/>
+      <rect x="24" y="28" width="80" height="72" rx="6" fill="#fff7ef"/>
+      <circle cx="36" cy="38" r="4" fill="#d19a7a"/>
+      <circle cx="92" cy="38" r="4" fill="#d19a7a"/>
+    </svg>
+    <!-- Balance of justice -->
+    <svg class="balance" viewBox="0 0 128 128">
+      <path d="M64 18v76" stroke="#4b2e2e" stroke-width="5"/>
+      <circle cx="64" cy="18" r="8" fill="#8a4f4f"/>
+      <path d="M20 44h88" stroke="#4b2e2e" stroke-width="5"/>
+      <path d="M36 44l-16 28h32L36 44zm56 0l-16 28h32L92 44z" fill="#f2ddc6" stroke="#8a6b50" stroke-width="3"/>
+      <rect x="52" y="92" width="24" height="8" fill="#8a4f4f"/>
+    </svg>
   </div>
 
+  <main class="container">
+    <h1 class="page-title">The Ethical Archive</h1>
+    <p class="page-sub">
+      Notes from practice and philosophy: I write to test arguments, trace harms, and make design choices legible.
+      My process is slow, citation-first, and care-centred—aimed at building <em>usable</em> ethics for messy, real systems.
+    </p>
+
+    <section class="archive">
+
+      <!-- PAPER 1 -->
+      <article class="scroll" data-id="paper-1">
+        <div class="ink-pulse"></div>
+        <header class="head">
+          <div class="title">Trustworthy for Whom? The Ethical Limits of Trust-Based AI Governance in the EU</div>
+          <button class="seal" aria-label="Open paper">
+            <span class="crack" aria-hidden="true"></span>
+          </button>
+        </header>
+        <div class="content" id="panel-paper-1" aria-hidden="true">
+          <div class="content-inner">
+            <p class="abstract"><strong>Abstract.</strong> xxx</p>
+
+            <div class="actions">
+              <a class="btn" href="/assets/pdf/paper1.pdf" download>Download PDF</a>
+            </div>
+
+            <div class="meta">
+              <div class="related">
+                <h4>Related Reading</h4>
+                <ul>
+                  <li><a href="/assets/pdf/related1.pdf">xxx Related paper 1</a></li>
+                  <li><a href="/assets/pdf/related2.pdf">xxx Related paper 2</a></li>
+                  <li><a href="/assets/pdf/related3.pdf">xxx Related paper 3</a></li>
+                </ul>
+              </div>
+
+              <div class="comments">
+                <h4>Comments</h4>
+                <div id="disqus_thread_paper-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PAPER 2 -->
+      <article class="scroll" data-id="paper-2">
+        <div class="ink-pulse"></div>
+        <header class="head">
+          <div class="title">Beyond Techno-Feudalism: Reclaiming Self-Sovereign Identity as Democratic Infrastructure</div>
+          <button class="seal" aria-label="Open paper">
+            <span class="crack" aria-hidden="true"></span>
+          </button>
+        </header>
+        <div class="content" id="panel-paper-2" aria-hidden="true">
+          <div class="content-inner">
+            <p class="abstract"><strong>Abstract.</strong> xxx</p>
+
+            <div class="actions">
+              <a class="btn" href="/assets/pdf/paper2.pdf" download>Download PDF</a>
+            </div>
+
+            <div class="meta">
+              <div class="related">
+                <h4>Related Reading</h4>
+                <ul>
+                  <li><a href="/assets/pdf/related4.pdf">xxx Related paper 1</a></li>
+                  <li><a href="/assets/pdf/related5.pdf">xxx Related paper 2</a></li>
+                </ul>
+              </div>
+
+              <div class="comments">
+                <h4>Comments</h4>
+                <div id="disqus_thread_paper-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PAPER 3 -->
+      <article class="scroll" data-id="paper-3">
+        <div class="ink-pulse"></div>
+        <header class="head">
+          <div class="title">Artificial Empathy as Emotional Misrepresentation</div>
+          <button class="seal" aria-label="Open paper">
+            <span class="crack" aria-hidden="true"></span>
+          </button>
+        </header>
+        <div class="content" id="panel-paper-3" aria-hidden="true">
+          <div class="content-inner">
+            <p class="abstract"><strong>Abstract.</strong> xxx</p>
+
+            <div class="actions">
+              <a class="btn" href="/assets/pdf/paper3.pdf" download>Download PDF</a>
+            </div>
+
+            <div class="meta">
+              <div class="related">
+                <h4>Related Reading</h4>
+                <ul>
+                  <li><a href="/assets/pdf/related6.pdf">xxx Related paper 1</a></li>
+                  <li><a href="/assets/pdf/related7.pdf">xxx Related paper 2</a></li>
+                </ul>
+              </div>
+
+              <div class="comments">
+                <h4>Comments</h4>
+                <div id="disqus_thread_paper-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PAPER 4 -->
+      <article class="scroll" data-id="paper-4">
+        <div class="ink-pulse"></div>
+        <header class="head">
+          <div class="title">A Moral Case Against First-Person Simulated Care by AI</div>
+          <button class="seal" aria-label="Open paper">
+            <span class="crack" aria-hidden="true"></span>
+          </button>
+        </header>
+        <div class="content" id="panel-paper-4" aria-hidden="true">
+          <div class="content-inner">
+            <p class="abstract"><strong>Abstract.</strong> xxx</p>
+
+            <div class="actions">
+              <a class="btn" href="/assets/pdf/paper4.pdf" download>Download PDF</a>
+            </div>
+
+            <div class="meta">
+              <div class="related">
+                <h4>Related Reading</h4>
+                <ul>
+                  <li><a href="/assets/pdf/related8.pdf">xxx Related paper 1</a></li>
+                  <li><a href="/assets/pdf/related9.pdf">xxx Related paper 2</a></li>
+                </ul>
+              </div>
+
+              <div class="comments">
+                <h4>Comments</h4>
+                <div id="disqus_thread_paper-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
   <script>
-    // Toggle unfold animation
-    document.querySelectorAll('.paper-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const content = header.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    // Helper: smoothly expand/collapse content with max-height trick
+    function setExpanded(panel, expand) {
+      if (expand) {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.setAttribute('aria-hidden', 'false');
+      } else {
+        panel.style.maxHeight = "0px";
+        panel.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    // Ink pulse for delight
+    function pulse(el, ev){
+      const p = el.querySelector('.ink-pulse');
+      const rect = el.getBoundingClientRect();
+      p.style.setProperty('--x', (ev.clientX - rect.left) + 'px');
+      p.style.setProperty('--y', (ev.clientY - rect.top) + 'px');
+      p.classList.add('show');
+      setTimeout(()=>p.classList.remove('show'), 450);
+    }
+
+    // Handle open/close + wax seal break + Disqus per paper
+    const shortname = 'your-disqus-shortname'; // <-- replace me
+    let disqusLoaded = false;
+
+    document.querySelectorAll('.scroll').forEach(sc => {
+      const seal = sc.querySelector('.seal');
+      const panel = sc.querySelector('.content');
+      const id = sc.dataset.id;
+
+      // Click anywhere in header also toggles
+      sc.querySelector('.head').addEventListener('click', (ev) => {
+        // ignore clicks that came from the download button area (none here) – we only have the seal + header
+        const isOpen = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+        pulse(sc, ev);
+
+        // Close all others
+        document.querySelectorAll('.scroll .content').forEach(other => {
+          if (other !== panel) { setExpanded(other, false); other.parentElement.querySelector('.seal')?.classList.remove('broken'); }
+        });
+
+        // Toggle this one
+        setExpanded(panel, !isOpen);
+        seal.classList.toggle('broken', !isOpen);
+
+        // Load or reset Disqus for this paper
+        const threadId = 'disqus_thread_' + id;
+        const threadEl = document.getElementById(threadId);
+        if (!threadEl) return;
+
+        const pageUrl = window.location.origin + window.location.pathname + '#' + id;
+        const pageIdentifier = id;
+
+        if (!disqusLoaded) {
+          // First time load
+          window.disqus_config = function () {
+            this.page.url = pageUrl;
+            this.page.identifier = pageIdentifier;
+          };
+          const d = document, s = d.createElement('script');
+          s.src = 'https://' + shortname + '.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          disqusLoaded = true;
+        } else if (window.DISQUS) {
+          // Switch threads
+          window.DISQUS.reset({
+            reload: true,
+            config: function () {
+              this.page.url = pageUrl;
+              this.page.identifier = pageIdentifier;
+            }
+          });
+        }
+      });
+
+      // Keyboard open via Enter/Space on seal
+      seal.addEventListener('keydown', (e)=>{
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          sc.querySelector('.head').click();
+        }
       });
     });
-
-    // Disqus embed (replace "your-disqus-shortname" with your real shortname)
-    var disqus_config = function () {
-      this.page.url = window.location.href;
-      this.page.identifier = window.location.pathname;
-    };
-    (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://your-disqus-shortname.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
   </script>
 
+  <!-- Noscript note for Disqus -->
+  <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
 </body>
 </html>
-
