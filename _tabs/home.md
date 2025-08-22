@@ -5,3 +5,254 @@ permalink: /
 icon: home
 order: 0
 ---
+
+
+<!-- Custom Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Parallax Background -->
+<div style="background: linear-gradient(120deg, #6B7280, #10B981), url('/assets/img/parallax-bg.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 5rem 1rem; text-align: center; color: white; animation: bgShift 15s infinite;">
+  <img src="/assets/img/avatar.webp" alt="Purvi Jain" style="width: 150px; height: 150px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 15px rgba(255,255,255,0.3);" loading="lazy">
+  
+  <h1 id="typed-text" style="font-size: 2.8rem; font-family: 'Merriweather', serif; margin-top: 1rem;"></h1>
+  
+  <p style="font-size: 1.2rem; max-width: 700px; margin: 1rem auto; font-family: 'Poppins', sans-serif;">
+    Exploring AI, ethics, and digital futures, one idea at a time.
+  </p>
+  
+  <a href="/tabs/projects" class="btn-custom">View Latest Project</a>
+  
+  <div id="compass" style="margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <div class="compass-tab" onclick="showEssay('fairness')">Fairness</div>
+    <div class="compass-tab" onclick="showEssay('bias')">Bias</div>
+    <div class="compass-tab" onclick="showEssay('privacy')">Privacy</div>
+    <div id="essay-content" style="display: none; margin-top: 1rem; padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 8px;"></div>
+  </div>
+</div>
+
+<!-- Featured Sections -->
+<div style="max-width: 900px; margin: 4rem auto; font-family: 'Poppins', sans-serif;">
+  <h2>Featured Sections</h2>
+
+  <style>
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .feature-card .title {
+      display: flex; align-items: center; gap: 0.5rem; font-weight: 700;
+    }
+    .feature-card i { color: #8B5CF6; }
+    @media (max-width: 600px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .btn-custom {
+      background-color: #8B5CF6;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    .btn-custom:hover {
+      background-color: #7C3AED;
+    }
+    .card-hover {
+      flex: 1 1 250px;
+      background: #F3F4F6;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-decoration: none;
+      color: #111;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .card-hover:hover {
+      background: #E0E7FF;
+      transform: translateY(-5px);
+    }
+    .compass-tab {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      background: #8B5CF6;
+      color: white;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+    .compass-tab:hover {
+      transform: scale(1.1);
+    }
+    @keyframes bgShift {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 0%; }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+
+  <div class="feature-grid">
+    <a href="/tabs/projects" class="card-hover feature-card">
+      <div class="title"><i class="fas fa-code"></i> Projects</div>
+      <div>Mini tools, ethical experiments, and AI prototypes.</div>
+    </a>
+
+    <a href="/tabs/ethical" class="card-hover feature-card">
+      <div class="title"><i class="fas fa-pen-nib"></i> Ethical Writing</div>
+      <div>Essays on fairness, justice, and tech futures.</div>
+    </a>
+
+    <a href="/posts" class="card-hover feature-card">
+      <div class="title"><i class="fas fa-feather-alt"></i> Blogs</div>
+      <div>Thoughts on research, reflection, and learning.</div>
+    </a>
+
+    <a href="https://www.youtube.com/@unitedbyfascinationforlearning" target="_blank" rel="noopener" class="card-hover feature-card">
+      <div class="title"><i class="fas fa-compass"></i> Travel Vlog</div>
+      <div>Slow travel, city stories, and creative field notes.</div>
+    </a>
+  </div>
+
+  <h2 style="margin-top: 3rem;">Why AI Needs Philosophy?</h2>
+  <p>
+    Technology shapes the world, but ethics shapes technology. This space is where code meets conscience.
+  </p>
+  <p>
+    AI is not just about data and decisions — it’s about values, power, and people. Philosophy asks the questions that
+    technology often ignores: What is fairness? Who gets to decide? What kind of future are we building? This section is
+    where I reflect on the ethical assumptions embedded in our systems and ask how we can do better, not just as engineers,
+    but as citizens. Philosophy doesn’t slow down innovation; it gives it direction.
+  </p>
+
+  <h3>Recent Blog</h3>
+  <p><a href="/posts/2025-07-22-welcome">Welcome to AI Ethics Explorer →</a></p>
+</div>
+
+<!-- 🎙️ YouTube Podcast Section -->
+<div style="max-width: 900px; margin: 4rem auto; text-align: center; font-family: 'Poppins', sans-serif;">
+  <h2>🎙️ United by Fascination for Learning</h2>
+  <p style="max-width: 700px; margin: 1rem auto; font-size: 1.1rem;">
+    I also host a podcast and YouTube channel exploring curiosity, meaning, and interdisciplinary learning. 
+    Join me as I talk about philosophy, tech, ethics, and everything in between.
+  </p>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/O9JnMjOlDcw" 
+    title="YouTube video player" frameborder="0" allowfullscreen style="border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.1);" loading="lazy">
+  </iframe>
+  <p style="margin-top: 1rem;">
+    <a href="https://www.youtube.com/@unitedbyfascinationforlearning" target="_blank" class="btn-custom">
+      📺 Watch More on YouTube
+    </a>
+  </p>
+</div>
+
+<!-- Values Map -->
+<div style="max-width: 900px; margin: 4rem auto; text-align: center;">
+  <h2>Values Map</h2>
+  <input type="range" id="transparencySlider" min="0" max="100" value="50" style="width: 300px;">
+  <label for="transparencySlider">Transparency: <span id="transparencyValue">50</span>%</label>
+  <br>
+  <input type="range" id="efficiencySlider" min="0" max="100" value="50" style="width: 300px;">
+  <label for="efficiencySlider">Efficiency: <span id="efficiencyValue">50</span>%</label>
+  <div id="valuesChart" style="max-width: 400px; margin: 2rem auto;"></div>
+</div>
+
+<!-- Typing Animation Script -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  var typed = new Typed("#typed-text", {
+    strings: [
+      "Hi, I’m Purvi Jain.",
+      "Researcher. Writer. Explorer of Ethical AI.",
+      "Welcome to my digital garden 🌱"
+    ],
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: true
+  });
+
+  function showEssay(topic) {
+    const essays = {
+      fairness: "Fairness in AI means ensuring algorithms treat all individuals equitably, avoiding discrimination based on race, gender, or socioeconomic status. It’s about asking: Who benefits, and who is left behind?",
+      bias: "Bias in AI occurs when models reflect human prejudices in their training data, leading to unfair outcomes. Identifying and mitigating this is key to ethical tech.",
+      privacy: "Privacy in AI involves protecting user data from misuse. It’s a balance between innovation and respecting individual autonomy in a digital world."
+    };
+    document.getElementById('essay-content').innerHTML = essays[topic];
+    document.getElementById('essay-content').style.display = 'block';
+  }
+
+  const ctx = document.getElementById('valuesChart').getContext('2d');
+  const chart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['Transparency', 'Efficiency', 'Fairness', 'Privacy'],
+      datasets: [{
+        label: 'Your Values',
+        data: [50, 50, 60, 70],
+        backgroundColor: 'rgba(139, 92, 246, 0.2)',
+        borderColor: '#8B5CF6',
+        borderWidth: 2
+      }, {
+        label: 'My Values',
+        data: [70, 40, 80, 90],
+        backgroundColor: 'rgba(16, 185, 129, 0.2)',
+        borderColor: '#10B981',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      scales: { r: { beginAtZero: true, max: 100 } }
+    }
+  });
+  document.getElementById('transparencySlider').addEventListener('input', (e) => {
+    const value = e.target.value;
+    document.getElementById('transparencyValue').textContent = value;
+    chart.data.datasets[0].data[0] = value;
+    chart.update();
+  });
+  document.getElementById('efficiencySlider').addEventListener('input', (e) => {
+    const value = e.target.value;
+    document.getElementById('efficiencyValue').textContent = value;
+    chart.data.datasets[0].data[1] = value;
+    chart.update();
+  });
+</script>
+
+<!-- Footer -->
+<footer style="text-align: center; margin-top: 5rem; font-size: 0.9rem; color: #888; font-family: 'Poppins', sans-serif;">
+  © 2025 — Built with love, code, and critical questions 
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray('h2, h3').forEach(header => {
+    gsap.from(header, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      scrollTrigger: {
+        trigger: header,
+        start: "top 80%",
+      }
+    });
+    header.addEventListener('mouseenter', () => {
+      header.innerHTML += ` <span style="font-size: 0.8rem; color: #6B7280;">— "The unexamined tech is not worth building."</span>`;
+    });
+    header.addEventListener('mouseleave', () => {
+      header.innerHTML = header.innerHTML.replace(/<span.*?>.*?<\/span>/, '');
+    });
+  });
+</script>
