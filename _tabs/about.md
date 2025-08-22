@@ -5,18 +5,20 @@ order: 1
 layout: default
 ---
 
-<!-- Custom Styles for a Fancy Design -->
+<!-- Custom Styles for a Fancy and Philosophical Design -->
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Space+Grotesk:wght@400;600&display=swap');
+
   :root {
     --ink: #111;
     --muted: #595959;
-    --accent: #FFB6C1;           /* Light pinkish accent */
-    --accent-2: #FFDAB9;         /* Soft peach */
-    --chip: #FFF0F5;             /* Very light pink */
+    --accent: #D81B60;          /* Bold magenta for name */
+    --accent-2: #C2185B;        /* Deeper magenta for headlines */
+    --chip: #FFF0F5;            /* Very light pink */
     --card: #fff;
     --ring: rgba(0,0,0,.08);
     --background-gradient: linear-gradient(to bottom, #FFE4E1 0%, #FFFFFF 100%);
-    --fancy-shadow: 0 10px 30px rgba(255,182,193,.2);
+    --fancy-shadow: 0 10px 30px rgba(216,27,96,.2);
   }
 
   .about-wrap {
@@ -39,37 +41,29 @@ layout: default
     margin-bottom: 2.5rem;
     padding: 1.5rem;
     border-radius: 16px;
-    background: rgba(255,182,193,0.15);
+    background: rgba(216,27,96,0.15);
     box-shadow: var(--fancy-shadow);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
   }
   .hero:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(255,182,193,.3);
+    box-shadow: 0 15px 40px rgba(216,27,96,.3);
   }
   .hero .pic {
     width: 160px; height: 160px; border-radius: 50%; overflow: hidden;
-    box-shadow: 0 12px 24px rgba(255,182,193,.3);
+    box-shadow: 0 12px 24px rgba(216,27,96,.3);
     transition: transform 0.4s ease;
   }
   .hero .pic:hover { transform: rotate(5deg) scale(1.05); }
   .hero .pic img { width: 100%; height: 100%; object-fit: cover; }
   .hero h1 {
-    font-size: clamp(2rem, 1.5rem + 2vw, 2.75rem);
     margin: 0;
     line-height: 1.1;
     letter-spacing: .3px;
     color: var(--accent);
-    text-shadow: 0 2px 4px rgba(255,182,193,.2);
-  }
-  .hero h1 .underline {
-    background: linear-gradient(120deg, rgba(255,182,193,.4) 0%, rgba(255,218,185,.4) 100%);
-    border-radius: 8px; padding: 0 .4rem;
-    animation: glow 2s infinite alternate;
-  }
-  @keyframes glow {
-    from { text-shadow: 0 0 5px rgba(255,182,193,.3); }
-    to { text-shadow: 0 0 10px rgba(255,182,193,.6); }
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+    text-shadow: 0 2px 6px rgba(216,27,96,.4);
   }
   .hero p { margin: .75rem 0 0; color: var(--muted); font-size: 1.1rem; line-height: 1.6; }
   .hero .personal-note {
@@ -79,7 +73,7 @@ layout: default
     font-size: 1rem;
     border-left: 4px solid var(--accent);
     padding-left: 1rem;
-    background: rgba(255,182,193,0.1);
+    background: rgba(216,27,96,0.1);
     border-radius: 8px;
   }
 
@@ -90,7 +84,7 @@ layout: default
     margin: 3rem 0 1.5rem;
     font-weight: 700;
     letter-spacing: .4px;
-    color: var(--accent);
+    color: var(--accent-2);
     font-size: 1.8rem;
     position: relative;
     text-transform: uppercase;
@@ -102,7 +96,7 @@ layout: default
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, var(--accent), transparent);
+    background: linear-gradient(to right, var(--accent-2), transparent);
     animation: slide 2s infinite alternate;
   }
   @keyframes slide {
@@ -112,7 +106,7 @@ layout: default
   .section-title .dot {
     width: 14px; height: 14px; border-radius: 50%;
     background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent-2));
-    box-shadow: 0 0 0 8px rgba(255,182,193,.15);
+    box-shadow: 0 0 0 8px rgba(216,27,96,.15);
     animation: pulse 2s infinite;
   }
   @keyframes pulse {
@@ -132,7 +126,7 @@ layout: default
     left: .5rem; top: 0; bottom: 0;
     width: 4px; background: linear-gradient(var(--accent), var(--accent-2));
     border-radius: 4px;
-    box-shadow: 0 0 10px rgba(255,182,193,.1);
+    box-shadow: 0 0 10px rgba(216,27,96,.1);
   }
   .t-item {
     position: relative;
@@ -145,7 +139,7 @@ layout: default
   }
   .t-item:hover {
     transform: translateX(10px) scale(1.02);
-    box-shadow: 0 12px 36px rgba(255,182,193,.3);
+    box-shadow: 0 12px 36px rgba(216,27,96,.3);
   }
   .t-item::before {
     content: "";
@@ -153,41 +147,121 @@ layout: default
     left: -2rem; top: 1.75rem;
     width: 18px; height: 18px; border-radius: 50%;
     background: var(--accent);
-    box-shadow: 0 0 0 6px rgba(255,182,193,.2);
+    box-shadow: 0 0 0 6px rgba(216,27,96,.2);
     transition: transform 0.3s ease;
   }
   .t-item:hover::before { transform: scale(1.2); }
-  .t-role { font-weight: 700; color: var(--accent); font-size: 1.2rem; }
+  .t-role { font-weight: 700; color: var(--accent-2); font-size: 1.2rem; }
   .t-org { color: var(--muted); font-weight: 600; font-size: 1rem; }
   .t-note { margin: .5rem 0 0; color: var(--ink); line-height: 1.6; }
-  .t-reflection { margin-top: .75rem; font-style: italic; color: var(--muted); font-size: 0.95rem; background: rgba(255,182,193,0.05); padding: 0.5rem; border-radius: 8px; }
+  .t-reflection { margin-top: .75rem; font-style: italic; color: var(--muted); font-size: 0.95rem; background: rgba(216,27,96,0.05); padding: 0.5rem; border-radius: 8px; }
 
-  .chips {
-    display: grid; gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 1rem;
-  }
-  .chip {
-    background: var(--chip);
-    border: 1px solid rgba(255,182,193,.15);
-    padding: 1.25rem;
-    border-radius: 16px;
+  .philosophical-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: linear-gradient(to right, rgba(216,27,96,0.1), rgba(255,255,255,0.9));
+    border-left: 6px solid var(--accent-2);
+    border-radius: 12px;
     box-shadow: var(--fancy-shadow);
-    transition: transform 0.4s ease, background 0.4s ease;
+    position: relative;
+    overflow: hidden;
   }
-  .chip:hover {
-    background: rgba(255,182,193,.2);
-    transform: rotate(2deg) translateY(-5px);
+  .philosophical-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle, rgba(216,27,96,0.05) 0%, transparent 70%);
+    z-index: 0;
   }
-  .chip b { display: block; margin-bottom: .5rem; color: var(--accent); font-size: 1.1rem; }
-  .chip small { color: var(--muted); line-height: 1.5; }
-  .chip details summary { cursor: pointer; font-weight: 600; color: var(--ink); transition: color 0.3s; }
-  .chip details summary:hover { color: var(--accent); }
-  .chip details[open] summary { color: var(--accent); }
-  .chip .t-reflection { margin-top: 0.75rem; }
+  .philosophical-section > * {
+    position: relative;
+    z-index: 1;
+  }
+  .philosophical-section h3 {
+    color: var(--accent-2);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .philosophical-section p {
+    color: var(--ink);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  .philosophical-section .reflection {
+    font-style: italic;
+    color: var(--accent);
+    font-size: 1rem;
+    padding: 0.75rem;
+    background: rgba(216,27,96,0.1);
+    border-radius: 8px;
+    display: inline-block;
+  }
 
-  .accordion { border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,182,193,.15); background: rgba(255,255,255,0.95); box-shadow: var(--fancy-shadow); }
-  .acc-item + .acc-item { border-top: 1px solid rgba(255,182,193,.15); }
+  .greenbeans-narrative {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: linear-gradient(to bottom, rgba(216,27,96,0.1), rgba(255,255,255,0.9));
+    border-top: 4px solid var(--accent-2);
+    border-bottom: 4px solid var(--accent-2);
+    border-radius: 12px;
+    box-shadow: var(--fancy-shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  .greenbeans-narrative::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(216,27,96,0.05) 0%, transparent 70%);
+    animation: rotate 10s infinite linear;
+  }
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .greenbeans-narrative > * {
+    position: relative;
+    z-index: 1;
+  }
+  .greenbeans-narrative h3 {
+    color: var(--accent-2);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .greenbeans-narrative p {
+    color: var(--ink);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  .greenbeans-narrative .timeline-point {
+    position: relative;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+  }
+  .greenbeans-narrative .timeline-point::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0.5rem;
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(216,27,96,.2);
+  }
+  .greenbeans-narrative .video-container {
+    margin-top: 1.5rem;
+    box-shadow: var(--fancy-shadow);
+    transition: transform 0.4s ease;
+  }
+  .greenbeans-narrative .video-container:hover { transform: scale(1.02); }
+
+  .accordion { border-radius: 16px; overflow: hidden; border: 1px solid rgba(216,27,96,.15); background: rgba(255,255,255,0.95); box-shadow: var(--fancy-shadow); }
+  .acc-item + .acc-item { border-top: 1px solid rgba(216,27,96,.15); }
   .acc-btn {
     width: 100%; text-align: left;
     padding: 1.25rem 1.5rem;
@@ -196,7 +270,7 @@ layout: default
     display: flex; align-items: center; justify-content: space-between;
     transition: background 0.4s ease, padding-left 0.4s ease;
   }
-  .acc-btn:hover { background: rgba(255,182,193,.15); padding-left: 1.75rem; }
+  .acc-btn:hover { background: rgba(216,27,96,.15); padding-left: 1.75rem; }
   .acc-btn span { color: var(--muted); font-weight: 600; font-size: 1rem; }
   .acc-panel {
     display: none; padding: 1.25rem 1.5rem;
@@ -205,61 +279,12 @@ layout: default
   .acc-panel p { margin: .5rem 0 .5rem; color: var(--ink); line-height: 1.6; }
   .acc-panel a { color: var(--accent); text-decoration: underline; transition: color 0.3s; }
   .acc-panel a:hover { color: var(--accent-2); }
-  .acc-reflection { font-style: italic; color: var(--muted); margin-top: 0.75rem; padding: 0.5rem; background: rgba(255,182,193,0.05); border-radius: 8px; }
-
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 16px;
-    margin-top: 1.5rem;
-    box-shadow: var(--fancy-shadow);
-    transition: transform 0.4s ease;
-  }
-  .video-container:hover { transform: scale(1.02); }
-  .video-container iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-  }
-
-  .curiosity-log {
-    display: grid; gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 1rem;
-  }
-  .log-item {
-    background: var(--chip);
-    border: 1px solid rgba(255,182,193,.15);
-    padding: 1.25rem;
-    border-radius: 16px;
-    box-shadow: var(--fancy-shadow);
-    transition: transform 0.4s ease;
-  }
-  .log-item:hover { transform: rotate(-2deg) translateY(-5px); }
-  .log-item b { display: block; margin-bottom: .5rem; color: var(--accent); font-size: 1.1rem; }
-  .log-item small { color: var(--muted); }
-
-  .media-row {
-    display: grid; gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  .media-card {
-    background: var(--card);
-    border: 1px solid rgba(255,182,193,.15);
-    border-radius: 16px; padding: 1.25rem;
-    box-shadow: var(--fancy-shadow);
-    transition: transform 0.4s ease;
-  }
-  .media-card:hover { transform: translateY(-5px); }
-  .media-card a { color: var(--accent); text-decoration: none; font-weight: 700; }
-  .media-card a:hover { text-decoration: underline; }
+  .acc-reflection { font-style: italic; color: var(--muted); margin-top: 0.75rem; padding: 0.5rem; background: rgba(216,27,96,0.05); border-radius: 8px; }
 
   .cta {
     margin-top: 3rem;
-    background: linear-gradient(120deg, rgba(255,182,193,.2), rgba(255,218,185,.2));
-    border: 1px dashed rgba(255,182,193,.5);
+    background: linear-gradient(120deg, rgba(216,27,96,.2), rgba(255,255,255,0.9));
+    border: 1px dashed rgba(216,27,96,.5);
     border-radius: 16px;
     padding: 1.5rem;
     text-align: center;
@@ -271,7 +296,7 @@ layout: default
   .cta a.btn {
     display: inline-block; padding: .75rem 1.5rem; border-radius: 12px;
     background: var(--accent); color: #fff; text-decoration: none; font-weight: 700;
-    box-shadow: 0 12px 24px rgba(255,182,193,.3);
+    box-shadow: 0 12px 24px rgba(216,27,96,.3);
     transition: transform 0.3s ease;
   }
   .cta a.btn:hover { transform: scale(1.1); }
@@ -282,7 +307,7 @@ layout: default
   @media (max-width: 700px) {
     .hero { grid-template-columns: 1fr; text-align: center; }
     .hero .pic { margin: 0 auto; }
-    .chips, .curiosity-log, .media-row { grid-template-columns: 1fr; }
+    .philosophical-section, .greenbeans-narrative { padding: 1.5rem; }
   }
 </style>
 
@@ -297,35 +322,17 @@ layout: default
       <img src="{{ site.avatar }}" alt="Purvi Jain, technologist and philosopher">
     </div>
     <div>
-      <h1>Hi, I’m <span class="underline">Purvi Jain</span></h1>
+      <h1>Hi, I’m <span class="underline">Purvi Jain</span> 👋</h1>
       <p>Technologist by training, philosopher by calling, and environmental activist at heart. I explore how we design <em>just</em> digital systems, asking: How can technology amplify fairness, sustainability, and human dignity? My journey spans coding in India, debating ethics in Glasgow, and leading grassroots movements—blending tech with purpose to create a better future.</p>
       <div class="personal-note">From unraveling AI’s moral complexities to turning e-waste into a civic mission, I’m driven by curiosity and a commitment to ethical innovation. Let’s connect to shape a world where tech serves us all.</div>
     </div>
   </section>
 
-  <!-- What I Do -->
-  <h2 class="section-title"><span class="dot"></span> What I Do</h2>
-  <div class="chips">
-    <div class="chip">
-      <b>AI Ethics Research</b>
-      <small>Developing frameworks to integrate Rawls’ Theory of Justice into AI, tackling bias and fairness.</small>
-      <div class="t-reflection">I aim to make AI a tool for equity, not division.</div>
-    </div>
-    <div class="chip">
-      <b>Environmental Activism</b>
-      <small>Leading e-waste initiatives and advocating for sustainable tech practices.</small>
-      <div class="t-reflection">Tech should heal, not harm, our planet.</div>
-    </div>
-    <div class="chip">
-      <b>Interdisciplinary Learning</b>
-      <small>Hosting podcasts and reading groups on AI, philosophy, and society.</small>
-      <div class="t-reflection">Connecting ideas across fields fuels my passion.</div>
-    </div>
-    <div class="chip">
-      <b>Education & Writing</b>
-      <small>Mentoring students and writing on AI ethics and social justice.</small>
-      <div class="t-reflection">Sharing knowledge to inspire change is my joy.</div>
-    </div>
+  <!-- Why I Do, What I Do -->
+  <div class="philosophical-section">
+    <h3>Why I Do, What I Do</h3>
+    <p>I am Purvi Jain—a seeker of truth, a builder of bridges, and a guardian of our shared future. My work is not merely a career but a calling, rooted in the belief that technology, when wielded with intention, can heal divisions, uplift the marginalized, and steward our planet. From the bustling streets of India, where I first learned to code, to the hallowed halls of Glasgow, where I wrestled with Rawls’ vision of justice, my path has been one of relentless inquiry. I see AI not as a tool of efficiency but as a mirror of our values—reflecting our biases, our hopes, our humanity. My activism with e-waste stems from a deep reverence for nature, a recognition that every discarded device carries a story of waste and potential. To mentor, to write, to connect across disciplines is to plant seeds of wisdom in a world hungry for meaning. This is my purpose: to weave philosophy into the fabric of technology, ensuring that every line of code serves a greater good.</p>
+    <p class="reflection">At my core, I am a dreamer who acts—driven by the question: What kind of world do we want to leave behind?</p>
   </div>
 
   <!-- Education Timeline -->
@@ -350,8 +357,8 @@ layout: default
       <div class="t-reflection">A cornerstone of my mission to align tech with justice.</div>
     </div>
     <div class="t-item">
-      <div class="t-role">Bachelor’s in Information Technology</div>
-      <div class="t-org">National Institute of Technology Raipur, India</div>
+      <div class="t-role">Bachelor’s in Information Technology / Computer Science</div>
+      <div class="t-org">India</div>
       <p class="t-note">Laid the foundation with coding, sparking my interest in tech’s ethical challenges.</p>
       <div class="t-reflection">Where my journey began.</div>
     </div>
@@ -395,32 +402,14 @@ layout: default
   </div>
 
   <!-- GreenBeans Initiative -->
-  <h2 class="section-title"><span class="dot"></span> GreenBeans Initiative</h2>
-  <div class="chips">
-    <div class="chip">
-      <b>Mission</b>
-      <small>First student-led e-waste movement in Chhattisgarh, co-founded and led by me.</small>
-      <div class="t-reflection">I co-founded and continue to serve as the President of GreenBeans, the first-ever student-led e-waste movement in Chhattisgarh. What began as a small group of just three or four friends driven by concern for the environment has now grown into a community of over 30 active members. GreenBeans was born out of a simple but urgent idea: to spread awareness about the dangers of electronic waste in a state where this conversation had never truly begun.
-
-As pioneers in this space, we worked closely with Raipur Smart City and the Chhattisgarh Environment Conservation Board (CECB), creating impactful projects that linked young people with city-level sustainability efforts. Alongside awareness campaigns, we also organized plantation drives, educational events, and community workshops, showing that environmental action can be both hands-on and deeply collaborative.
-
-What started as a small initiative among friends has become a movement that inspires others to rethink waste, sustainability, and their role in protecting our shared future.</div>
-    </div>
-    <div class="chip">
-      <b>Impact</b>
-      <ul class="mini" style="list-style-type: disc; padding-left: 1rem; color: var(--ink);">
-        <li>Reached 100+ colleges in ~3 months via campaigns & workshops</li>
-        <li>Convinced universities to recycle legacy IT</li>
-        <li>Framed e-waste as a shared civic responsibility</li>
-      </ul>
-      <div class="t-reflection">A testament to collective environmental action.</div>
-    </div>
-    <div class="chip">
-      <b>Video Story</b>
-      <small>📺 <a href="https://youtu.be/OgPp5OKAzEU?si=7yFxgIxdfUA-qFaJ" target="_blank" rel="noopener">Watch our journey →</a></small>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/OgPp5OKAzEU" title="GreenBeans Society Intro Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+  <div class="greenbeans-narrative">
+    <h3>GreenBeans Initiative: A Movement Born of Purpose</h3>
+    <p>I co-founded and continue to serve as the President of GreenBeans, the first-ever student-led e-waste movement in Chhattisgarh. What began as a small group of just three or four friends driven by concern for the environment has now grown into a community of over 30 active members. GreenBeans was born out of a simple but urgent idea: to spread awareness about the dangers of electronic waste in a state where this conversation had never truly begun.</p>
+    <div class="timeline-point">As pioneers, we partnered with Raipur Smart City and the Chhattisgarh Environment Conservation Board (CECB), crafting projects that linked young people with city-level sustainability efforts.</div>
+    <div class="timeline-point">We launched awareness campaigns, organized plantation drives, and hosted educational workshops, proving that environmental action can be both hands-on and deeply collaborative.</div>
+    <div class="timeline-point">What started as a small initiative among friends has blossomed into a movement that inspires others to rethink waste, sustainability, and their role in protecting our shared future.</div>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/OgPp5OKAzEU" title="GreenBeans Society Intro Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -454,7 +443,7 @@ What started as a small initiative among friends has become a movement that insp
     <div class="chip">
       <b>Communities</b>
       <details>
-        <summary>Society for Women in Philosophy UK · Minorities in Philosophy · The Aristotelian Society</summary>
+        <summary>SWIP UK · MAP · The Aristotelian Society</summary>
         <small>Active participation; organizing and presenting discussions.</small>
         <div class="t-reflection">Growing through diverse philosophical voices.</div>
       </details>
@@ -487,7 +476,7 @@ What started as a small initiative among friends has become a movement that insp
       }
     });
   });
-  gsap.utils.toArray('.t-item, .chip, .log-item, .media-card, .acc-item').forEach((item, i) => {
+  gsap.utils.toArray('.t-item, .chip, .log-item, .media-card, .acc-item, .timeline-point').forEach((item, i) => {
     gsap.from(item, {
       opacity: 0,
       y: 50,
