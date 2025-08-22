@@ -92,17 +92,17 @@ order: 0
       <div>Mini tools, ethical experiments, and AI prototypes.</div>
     </a>
 
-    <a href="/tabs/ethical" class="card-hover feature-card">
+  <a href="/tabs/ethical" class="card-hover feature-card">
       <div class="title"><i class="fas fa-pen-nib"></i> Ethical Writing</div>
       <div>Essays on fairness, justice, and tech futures.</div>
     </a>
 
-    <a href="/posts" class="card-hover feature-card">
+   <a href="/posts" class="card-hover feature-card">
       <div class="title"><i class="fas fa-feather-alt"></i> Blogs</div>
       <div>Thoughts on research, reflection, and learning.</div>
     </a>
 
-    <a href="https://peppy-crepe-048cfc.netlify.app/" target="_blank" rel="noopener" class="card-hover feature-card">
+  <a href="https://peppy-crepe-048cfc.netlify.app/" target="_blank" rel="noopener" class="card-hover feature-card">
       <div class="title"><i class="fas fa-compass"></i> Travel Vlog</div>
       <div style="margin-top: 1rem;">A scrapbook of journeys with my best friend, where every trip becomes a postcard of laughter, love, and natsukashii memories.</div>
     </a>
