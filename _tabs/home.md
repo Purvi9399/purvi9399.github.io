@@ -9,11 +9,13 @@ order: 0
 <!-- Custom Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
+
 <!-- Parallax Background -->
-<div style="background-image: url('/assets/img/parallax-bg.jpg'); background-size: cover; background-attachment: fixed; padding: 5rem 1rem; text-align: center; color: white;">
-  <img src="/assets/img/avatar.jpg" alt="Purvi Jain" style="width: 150px; height: 150px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 15px rgba(255,255,255,0.3);">
+<div style="background: linear-gradient(120deg, #6B7280, #10B981, #F59E0B); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 5rem 1rem; text-align: center; color: white; animation: bgShift 15s infinite;">
+  <img src="/assets/img/avatar.jpg" alt="Purvi Jain" style="width: 150px; height: 150px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 15px rgba(255,255,255,0.3);" loading="lazy">
   
-  <h1 id="typed-text" style="font-size: 2.8rem; font-family: 'DM Serif Display', serif; margin-top: 1rem;"></h1>
+  <h1 id="typed-text" style="font-size: 2.8rem; font-family: 'Philosopher', serif; margin-top: 1rem;"></h1>
+</div>
   
   <p style="font-size: 1.2rem; max-width: 700px; margin: 1rem auto; font-family: 'Fira Sans', sans-serif;">
     Exploring AI, ethics, and digital futures, one idea at a time.
@@ -113,7 +115,7 @@ order: 0
 
   <a href="https://peppy-crepe-048cfc.netlify.app/" target="_blank" rel="noopener" class="card-hover feature-card">
       <div class="title"><i class="fas fa-compass"></i> Travel Vlog</div>
-      <div>Slow travel, city stories, and creative field notes.</div>
+      <div>A scrapbook of journeys with my best friend, where every trip becomes a postcard of laughter, love, and natsukashii memories.</div>
     </a>
   </div>
 
@@ -132,6 +134,78 @@ order: 0
   <p><a href="/posts/2025-07-22-welcome">Welcome to AI Ethics Explorer →</a></p>
 </div>
 
+<!-- Interactive Thought Carousel with Flip Effect -->
+<div style="max-width: 900px; margin: 4rem auto; text-align: center; font-family: 'Montserrat', sans-serif;">
+  <h2 style="font-family: 'Philosopher', serif; font-weight: 700; color: #4A5568; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">Thoughts from the Garden</h2>
+  <p style="max-width: 700px; margin: 1rem auto; font-size: 1.1rem; line-height: 1.6; color: #2D3748;">
+    Hover over the cards to flip and explore philosophical insights on AI ethics.
+  </p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; perspective: 1000px;">
+    <div class="flip-card" style="background: #F7FAFC; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.05); transition: transform 0.6s; transform-style: preserve-3d;">
+      <div class="flip-card-inner" style="position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+        <div class="flip-card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+          <h3 style="font-family: 'Philosopher', serif; color: #4A5568;">Fairness</h3>
+        </div>
+        <div class="flip-card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); padding: 1rem; background: #F7FAFC; border-radius: 12px; box-shadow: inset 0 0 10px rgba(0,0,0,0.05);">
+          <p style="font-family: 'Montserrat', sans-serif; color: #2D3748; line-height: 1.5;">Fairness in AI ensures equitable treatment across all individuals, mitigating discrimination based on race, gender, or socioeconomic status. It involves designing systems that prioritize justice and equal opportunity.</p>
+        </div>
+      </div>
+    </div>
+
+  <div class="flip-card" style="background: #F7FAFC; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.05); transition: transform 0.6s; transform-style: preserve-3d;">
+      <div class="flip-card-inner" style="position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+        <div class="flip-card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+          <h3 style="font-family: 'Philosopher', serif; color: #4A5568;">Bias</h3>
+        </div>
+        <div class="flip-card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); padding: 1rem; background: #F7FAFC; border-radius: 12px; box-shadow: inset 0 0 10px rgba(0,0,0,0.05);">
+          <p style="font-family: 'Montserrat', sans-serif; color: #2D3748; line-height: 1.5;">Bias in AI occurs when models reflect human prejudices embedded in training data, leading to skewed outcomes. Addressing bias requires rigorous data auditing and inclusive design.</p>
+        </div>
+      </div>
+    </div>
+
+  <div class="flip-card" style="background: #F7FAFC; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.05); transition: transform 0.6s; transform-style: preserve-3d;">
+      <div class="flip-card-inner" style="position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+        <div class="flip-card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+          <h3 style="font-family: 'Philosopher', serif; color: #4A5568;">Privacy</h3>
+        </div>
+        <div class="flip-card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); padding: 1rem; background: #F7FAFC; border-radius: 12px; box-shadow: inset 0 0 10px rgba(0,0,0,0.05);">
+          <p style="font-family: 'Montserrat', sans-serif; color: #2D3748; line-height: 1.5;">Privacy in AI protects user data from misuse, balancing innovation with individual autonomy. It demands robust safeguards to maintain trust in digital systems.</p>
+        </div>
+      </div>
+    </div>
+
+  <div class="flip-card" style="background: #F7FAFC; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.05); transition: transform 0.6s; transform-style: preserve-3d;">
+      <div class="flip-card-inner" style="position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+        <div class="flip-card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+          <h3 style="font-family: 'Philosopher', serif; color: #4A5568;">Trustworthiness</h3>
+        </div>
+        <div class="flip-card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); padding: 1rem; background: #F7FAFC; border-radius: 12px; box-shadow: inset 0 0 10px rgba(0,0,0,0.05);">
+          <p style="font-family: 'Montserrat', sans-serif; color: #2D3748; line-height: 1.5;">Trustworthiness in AI reflects reliability, transparency, and accountability. It ensures systems are dependable and their decisions can be understood and verified by users.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card {
+      position: relative;
+      min-height: 150px;
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      backface-visibility: hidden;
+    }
+    @media (max-width: 600px) {
+      .flip-card {
+        min-height: 120px;
+      }
+    }
+  </style>
+</div>
 
 <!-- 🎙️ YouTube Podcast Section -->
 <div style="max-width: 900px; margin: 4rem auto; text-align: center; font-family: 'Fira Sans', sans-serif;">
