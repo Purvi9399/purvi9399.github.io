@@ -32,7 +32,7 @@ order: 0
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 2rem; /* Increased gap for more space */
+      gap: 2rem; 
       max-width: 900px;
       margin: 0 auto;
     }
@@ -97,7 +97,7 @@ order: 0
       <div>Essays on fairness, justice, and tech futures.</div>
     </a>
 
-   <a href="/posts" class="card-hover feature-card">
+   <a href="/tabs/blogs.html" class="card-hover feature-card">
       <div class="title"><i class="fas fa-feather-alt"></i> Blogs</div>
       <div>Thoughts on research, reflection, and learning.</div>
     </a>
@@ -142,7 +142,7 @@ order: 0
       </div>
     </div>
 
-    <div class="flip-card" style="background: #F7FAFC; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.05); transition: transform 0.6s; transform-style: preserve-3d;">
+   <div class="flip-card" style="background: #F7FAFC; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.05); transition: transform 0.6s; transform-style: preserve-3d;">
       <div class="flip-card-inner" style="position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
         <div class="flip-card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
           <h3 style="font-family: 'Philosopher', serif; color: #4A5568;">Bias</h3>
@@ -154,7 +154,7 @@ order: 0
       </div>
     </div>
 
-    <div class="flip-card" style="background: #F7FAFC; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.05); transition: transform 0.6s; transform-style: preserve-3d;">
+   <div class="flip-card" style="background: #F7FAFC; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.05); transition: transform 0.6s; transform-style: preserve-3d;">
       <div class="flip-card-inner" style="position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
         <div class="flip-card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
           <h3 style="font-family: 'Philosopher', serif; color: #4A5568;">Privacy</h3>
@@ -166,7 +166,7 @@ order: 0
       </div>
     </div>
 
-    <div class="flip-card" style="background: #F7FAFC; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.05); transition: transform 0.6s; transform-style: preserve-3d;">
+  <div class="flip-card" style="background: #F7FAFC; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.05); transition: transform 0.6s; transform-style: preserve-3d;">
       <div class="flip-card-inner" style="position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
         <div class="flip-card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
           <h3 style="font-family: 'Philosopher', serif; color: #4A5568;">Trustworthiness</h3>
